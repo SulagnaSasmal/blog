@@ -1,0 +1,27 @@
+baseURL = "https://sulagnasasmal.github.io/blog/"
+languageCode = "en-us"
+title = "Sulagna Sasmal"
+theme = "PaperMod"
+
+[params]
+  author = "Sulagna Sasmal"
+  description = "Technical writing, docs strategy, and the craft of clarity."
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  defaultTheme = "auto"   # respects OS dark/light preference
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+[pagination]
+  pagerSize = 10
