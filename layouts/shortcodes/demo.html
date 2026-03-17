@@ -1,0 +1,27 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default "Live Demo" -}}
+{{- $height := .Get "height" | default "720" -}}
+<div class="demo-window">
+  <div class="demo-titlebar">
+    <span class="demo-dots">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </span>
+    <span class="demo-title">{{ $title }}</span>
+    <a class="demo-open" href="{{ $src }}" target="_blank" rel="noopener" title="Open in new tab">↗</a>
+  </div>
+  <div class="demo-body">
+    <iframe
+      src="{{ $src }}"
+      title="{{ $title }}"
+      loading="lazy"
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      style="width:100%;height:{{ $height }}px;border:none;">
+    </iframe>
+    <a class="demo-overlay-link" href="{{ $src }}" target="_blank" rel="noopener">
+      <span class="demo-play">▶</span>
+      <span class="demo-cta">Click to explore the live demo</span>
+    </a>
+  </div>
+</div>

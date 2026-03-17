@@ -1,0 +1,108 @@
+/* ── Demo window embed ─────────────────────────────────── */
+.demo-window {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+}
+
+/* macOS-style title bar */
+.demo-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--code-bg);
+  border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+
+.demo-dots {
+  display: flex;
+  gap: 6px;
+}
+.demo-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot.red    { background: #ff5f57; }
+.dot.yellow { background: #febc2e; }
+.dot.green  { background: #28c840; }
+
+.demo-title {
+  flex: 1;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.demo-open {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--primary);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.demo-open:hover { opacity: 1; }
+
+/* iframe container with overlay */
+.demo-body {
+  position: relative;
+  background: #0d1117;
+}
+
+.demo-body iframe {
+  display: block;
+}
+
+/* Play-button overlay — shown until user interacts */
+.demo-overlay-link {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.demo-overlay-link:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.demo-play {
+  font-size: 4rem;
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s, background 0.2s;
+}
+.demo-overlay-link:hover .demo-play {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.demo-cta {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Once the user clicks anywhere in the iframe, JS hides the overlay */
+.demo-body.active .demo-overlay-link {
+  display: none;
+}
