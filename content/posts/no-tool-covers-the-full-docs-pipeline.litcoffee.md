@@ -12,6 +12,7 @@ DocForge is an interactive prototype of a Docs-as-Code platform: six modules tha
 This post is a build log. What I built, why I made the choices I made, and what I learned along the way.
 
 **What DocForge actually is**
+
 DocForge is a working interactive demo with six modules, each representing a stage of the documentation pipeline:
 
 **Module 1: Dashboard.** Pipeline health at a glance. Build history with commit hashes and pass/fail statuisn'tent metrics broken down by DITA topic type. Contributor activity. Open doc issues. This is the module I wished existed at every company I have worked at, a single view that tells you whether your docs pipeline is healthy or broken without opening five different tools.
@@ -47,34 +48,56 @@ This is the kind of structural enforcement that no off-the-shelf tool gives you.
 The Style Linter module is the one I am most particular about because I have spent years doing exactly this work manually. Let me walk through the seven findings in the demo because they illustrate the kinds of quality problems that slip through in real documentation all the time.
 
 **Passive voice (Microsoft.Passive):** "The payment was declined by the issuing bank." The fix is "The issuing bank declined the payment." This is a standard Vale rule from the Microsoft Style Guide package. Passive voice is not always wrong, but in procedural documentation it obscures who is doing what, and that matters when a developer is debugging a failed API call at 2 AM.
+
 **Task-first violation (DocForge.TaskFirst):** A task topic opens with "Webhooks are a way to..." instead of leading with the user's goal. This is a custom rule. It enforces Carroll's Minimalism principle: lead with the action, provide background only when the reader needs it. I have seen entire documentation sets where every how-to page opens with two paragraphs of context before the first step. The reader came to do something. Let them do it.
+
 **Readability (Vale.Readability):** Flesch-Kincaid grade level of 14.2 against a target of grade 10. Developer docs should not read like academic papers. A grade-10 ceiling forces you to break up long sentences and replace jargon with plain language. This is not about dumbing things down. It is about respecting the reader's time.
+
 **Wordiness (Microsoft.Wordiness):** "In order to" should be "To." Three occurrences. This is the kind of thing that creeps in when writers are drafting fast and nobody is reviewing at the sentence level.
-Terminology inconsistency (DocForge.Terminology): "API key" versus "API Key" versus "api key" across multiple files. This is a documentation-specific rule. Inconsistent capitalization erodes trust. If the docs cannot agree on how to write the product's own terminology, why would a developer trust the technical accuracy?
+
+**Terminology inconsistency (DocForge.Terminology):** "API key" versus "API Key" versus "api key" across multiple files. This is a documentation-specific rule. Inconsistent capitalization erodes trust. If the docs cannot agree on how to write the product's own terminology, why would a developer trust the technical accuracy?
+
 **Progressive disclosure (DocForge.ProgressiveDisclosure):** A reference page exceeds 2,500 words. The recommendation is to split it into sub-topics. Long reference pages are a symptom of not thinking about information architecture. A developer looking up a single endpoint parameter should not have to scroll through 2,500 words of every endpoint in the API.
 
 **Missing code samples (DocForge.CodeSamples):** Four endpoints are missing SDK examples in Go and Ruby. If you support a language, your docs should cover it. Gaps in code sample coverage are one of the fastest ways to lose developer trust.
 
 These are not theoretical lint rules. Every single one of them comes from a real problem I have encountered in production documentation.
-The gap this prototype is pointing at
+
+
+**The gap this prototype is pointing at**
+
 I have spent close to twenty years writing documentation for enterprise platforms: FinTech, financial crime compliance, payments, investment banking, enterprise communications. I have used MadCap Flare, DITA/XML authoring tools, Confluence, GitHub wikis, Docs-as-Code with Markdown and static site generators, and more recently, AI-assisted writing tools.
+
 Here is the pattern I keep seeing. Every documentation team I have worked with eventually needs the same set of capabilities: version control, structured content classification, automated style enforcement, multi-format publishing, pipeline monitoring, and a configuration layer that ties it all together. And every team assembles this from a different patchwork of tools, glued together with custom scripts and tribal knowledge.
+
 The tools that exist today solve pieces of the problem well. Vale is excellent at style linting. GitHub Actions handles CI/CD. Static site generators like Docusaurus and Hugo produce great HTML output. But nobody has built the layer that connects them into a coherent pipeline designed specifically for documentation teams.
+
 Copilot and other AI writing tools are solving a different problem entirely. They help you write faster. They do not help you build a documentation system that is reliable, auditable, and scalable. They have no concept of topic taxonomy, no opinion about content structure, no mechanism for enforcing quality gates before content reaches readers.
+
 GitBook, Confluence, Mintlify, and ReadMe are publishing platforms. They give you somewhere to put your docs. They do not engineer the pipeline that produces them. There is a real difference between a writer who uses a docs tool and an engineer who builds the infrastructure behind it.
 That is the gap DocForge is pointing at. Not a missing feature in an existing tool. A missing category of tool altogether.
-What this prototype is and is not
+
+**What this prototype is and is not**
+
 I want to be direct about the boundaries. DocForge is an interactive prototype. It is a working demo that shows what a Docs-as-Code platform could look like if someone built it as an integrated system. The editor renders real Markdown. The linter findings are realistic. The build outputs show real format previews. The config file is a real YAML structure that could drive a real pipeline.
+
 It is not a production tool. There is no backend processing Markdown through an actual Vale server. The build outputs are previews, not generated artifacts. The Git integration is simulated.
+
 I built it as a portfolio piece to show that I understand the infrastructure behind the docs, not just the writing. But as I built it, I kept thinking: this should actually exist. Not as a demo. As a product.
+
 I am figuring out what the real product looks like.
-One question
-If you work in documentation, I am genuinely curious: what is the most painful part of your pipeline right now?
+
+**One question**
+
+If you work in documentation, I am genuinely curious: **what is the most painful part of your pipeline right now?**
+
 Not your writing workflow. Your pipeline. The system that takes your source content and gets it to readers. Where does it break? What do you spend the most time fighting with?
+
 I am asking because I want to know whether the gap I see from twenty years of enterprise documentation is the same gap other people are struggling with, or whether every team's pain is different enough that an integrated tool would miss the mark.
+
 If you have five minutes and want to see what I built, the demo is below. No login. No signup. Just click through.
 
-{{< demo src="https://sulagnasasmal.github.io/doccraft/" title="DocForge — Live Demo" height="720" >}}
-
-Sulagna Sasmal is a Documentation Engineer, Information Architect, and AI Tools Builder with nearly twenty years of experience in enterprise software documentation. She writes about documentation engineering, Docs-as-Code, and the tools that documentation teams actually need.
-Portfolio: sulagnasasmal.com · LinkedIn: linkedin.com/in/sulagnasasmal · GitHub: github.com/SulagnaSasmal
+{{< demo src="https://sulagnasasmal.github.io/doccraft/" title="DocForge—Live Demo" height="720" >}}
+-----------------------------------------------------------------------------
+*Sulagna Sasmal is a Documentation Engineer, Information Architect, and AI Tools Builder with nearly twenty years of experience in enterprise software documentation. She writes about documentation engineering, Docs-as-Code, and the tools that documentation teams actually need.
+Portfolio: sulagnasasmal.com · LinkedIn: linkedin.com/in/sulagnasasmal · GitHub: github.com/SulagnaSasmal*
