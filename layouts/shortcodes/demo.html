@@ -8,8 +8,9 @@
       <span class="dot yellow"></span>
       <span class="dot green"></span>
     </span>
+    <span class="demo-badge">Live walkthrough</span>
     <span class="demo-title">{{ $title }}</span>
-    <a class="demo-open" href="{{ $src }}" target="_blank" rel="noopener" title="Open in new tab">↗</a>
+    <a class="demo-open" href="{{ $src }}" target="_blank" rel="noopener" title="Open in new tab">Open demo ↗</a>
   </div>
   <div class="demo-body">
     <iframe
@@ -20,8 +21,15 @@
       style="width:100%;height:{{ $height }}px;border:none;">
     </iframe>
     <a class="demo-overlay-link" href="{{ $src }}" target="_blank" rel="noopener">
+      <span class="demo-eyebrow">Interactive product preview</span>
       <span class="demo-play">▶</span>
-      <span class="demo-cta">Click to explore the live demo</span>
+      <span class="demo-cta">{{ $title }}</span>
+      <span class="demo-subtitle">Play it inside this frame, then continue exploring without leaving the article.</span>
     </a>
+    <div class="demo-controls" aria-hidden="true">
+      <span class="demo-progress"><span class="demo-progress-fill"></span></span>
+      <span class="demo-control-label">00:00</span>
+      <span class="demo-control-label">Live demo</span>
+    </div>
   </div>
 </div>
