@@ -1,6 +1,7 @@
 ---
 title: "No Tool Covers the Full Docs Pipeline. So I Built One."
 date: 2026-03-18
+slug: "no-tool-covers-the-full-docs-pipeline"
 draft: false
 tags: ["docs", "strategy"]
 description: "I spent twenty years assembling documentation pipelines from a patchwork of tools. DocForge is an interactive prototype of what an integrated Docs-as-Code platform could look like: six modules covering the full pipeline from Markdown source to multi-format output, with DITA topic typing, Vale style linting, and CI/CD monitoring under one roof."
@@ -72,9 +73,9 @@ Here is the pattern I keep seeing. Every documentation team I have worked with e
 
 The tools that exist today solve pieces of the problem well. Vale is excellent at style linting. GitHub Actions handles CI/CD. Static site generators like Docusaurus and Hugo produce great HTML output. But nobody has built the layer that connects them into a coherent pipeline designed specifically for documentation teams.
 
-Copilot and other AI writing tools are solving a different problem entirely. They help you write faster. They do not help you build a documentation system that is reliable, auditable, and scalable. They have no concept of topic taxonomy, no opinion about content structure, no mechanism for enforcing quality gates before content reaches readers.
+Copilot and other AI writing tools are solving a different problem entirely. They help you write faster. They don't help you build a documentation system that is reliable, auditable, and scalable. They have no concept of topic taxonomy, no opinion about content structure, no mechanism for enforcing quality gates before content reaches readers.
 
-GitBook, Confluence, Mintlify, and ReadMe are publishing platforms. They give you somewhere to put your docs. They do not engineer the pipeline that produces them. There is a real difference between a writer who uses a docs tool and an engineer who builds the infrastructure behind it.
+GitBook, Confluence, Mintlify, and ReadMe are publishing platforms. They give you somewhere to put your docs. They don't engineer the pipeline that produces them. There is a real difference between a writer who uses a docs tool and an engineer who builds the infrastructure behind it.
 That is the gap DocForge is pointing at. Not a missing feature in an existing tool. A missing category of tool altogether.
 
 **What this prototype is and is not**
@@ -97,7 +98,7 @@ I am asking because I want to know whether the gap I see from twenty years of en
 
 If you have five minutes and want to see what I built, the demo is below. No login. No signup. Just click through.
 
-{{< demo src="https://sulagnasasmal.github.io/doccraft/" title="DocForge—Live Demo" height="720" >}}
+{{< demo src="https://sulagnasasmal.github.io/Documentation-Center-Platform/demo.html" title="DocForge—Live Demo" height="720" >}}
 -----------------------------------------------------------------------------
 *Sulagna Sasmal is a Documentation Engineer, Information Architect, and AI Tools Builder with nearly twenty years of experience in enterprise software documentation. She writes about documentation engineering, Docs-as-Code, and the tools that documentation teams actually need.
 Portfolio: sulagnasasmal.com · LinkedIn: linkedin.com/in/sulagnasasmal · GitHub: github.com/SulagnaSasmal*
