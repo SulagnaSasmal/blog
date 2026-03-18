@@ -436,8 +436,16 @@ body.dark .post-entry {
 .principle-card,
 .about-summary-card,
 .about-main-card,
-
 .portfolio-card-featured {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.28)),
+    var(--entry);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-md);
+}
 
 body.dark .hero-copy,
 body.dark .hero-panel,
@@ -999,59 +1007,6 @@ body.dark .mini-metric {
   display: block;
 }
 
-.demo-body::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 16%, transparent 78%, rgba(0, 0, 0, 0.45));
-  pointer-events: none;
-  z-index: 2;
-}
-
-.demo-controls {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 1rem 1.1rem;
-  background: linear-gradient(180deg, transparent, rgba(7, 10, 14, 0.9));
-  pointer-events: none;
-}
-
-.demo-live-pill {
-  padding: 0.42rem 0.72rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 250, 243, 0.88);
-}
-
-.demo-progress {
-  flex: 1;
-  height: 6px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-}
-
-.demo-progress-fill {
-  display: block;
-  width: 36%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
-  box-shadow: 0 0 24px rgba(195, 143, 46, 0.45);
-}
-
-.demo-control-label {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.82rem;
-}
-
 .post-content figure.flow-figure {
   margin: 2.4rem 0;
   padding: 1rem;
@@ -1064,9 +1019,12 @@ body.dark .mini-metric {
 }
 
 body.dark .post-content figure.flow-figure {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
-    var(--entry);
+  background: #28221a;
+  border-color: rgba(255, 214, 169, 0.18);
+}
+
+body.dark .post-content figure.flow-figure figcaption {
+  color: #9a8878;
 }
 
 .post-content figure.flow-figure img {

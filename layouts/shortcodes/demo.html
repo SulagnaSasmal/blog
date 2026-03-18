@@ -8,9 +8,9 @@
       <span class="dot yellow"></span>
       <span class="dot green"></span>
     </span>
-    <span class="demo-badge">Live walkthrough</span>
+    <span class="demo-badge">Interactive demo</span>
     <span class="demo-title">{{ $title }}</span>
-    <a class="demo-open" href="{{ $src }}" target="_blank" rel="noopener" title="Open in new tab">Open demo ↗</a>
+    <a class="demo-open" href="{{ $src }}" target="_blank" rel="noopener" title="Open in new tab">Open ↗</a>
   </div>
   <div class="demo-body">
     <iframe
@@ -22,11 +22,5 @@
       sandbox="allow-scripts allow-same-origin allow-popups"
       style="width:100%;height:{{ $height }}px;border:none;">
     </iframe>
-    <div class="demo-controls" aria-hidden="true">
-      <span class="demo-control-label demo-live-pill">Playing in-page</span>
-      <span class="demo-progress"><span class="demo-progress-fill"></span></span>
-      <span class="demo-control-label">00:00</span>
-      <span class="demo-control-label">Live demo</span>
-    </div>
   </div>
 </div>

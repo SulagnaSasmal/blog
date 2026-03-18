@@ -1,118 +1,115 @@
-<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="360" viewBox="0 0 800 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="240" y1="64" x2="1360" y2="836" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="360" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF7EC"/>
       <stop offset="1" stop-color="#F4EBDE"/>
     </linearGradient>
-    <linearGradient id="accentA" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#B46836"/>
       <stop offset="1" stop-color="#D89F49"/>
     </linearGradient>
-    <linearGradient id="accentB" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="cool" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#0D7A74"/>
       <stop offset="1" stop-color="#2A9D8F"/>
     </linearGradient>
-    <filter id="shadow" x="0" y="0" width="1600" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#2F2418" flood-opacity="0.16"/>
-    </filter>
   </defs>
 
-  <rect width="1600" height="980" rx="42" fill="url(#bg)"/>
-  <circle cx="196" cy="164" r="188" fill="#E9C89E" fill-opacity="0.22"/>
-  <circle cx="1396" cy="168" r="154" fill="#7FD3C4" fill-opacity="0.18"/>
-  <circle cx="1348" cy="780" r="210" fill="#E0A2A2" fill-opacity="0.12"/>
+  <rect width="800" height="360" rx="20" fill="url(#bg)"/>
 
-  <text x="108" y="126" fill="#6E5645" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3.2">DOCFORGE PIPELINE</text>
-  <text x="108" y="186" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700">From source content to reader-facing output</text>
-  <text x="108" y="236" fill="#5E5146" font-family="Segoe UI, Arial, sans-serif" font-size="28">
-    <tspan x="108" dy="0">A single documentation system should connect structure, quality, build, and publishing</tspan>
-    <tspan x="108" dy="36">instead of leaving teams to glue them together by hand.</tspan>
+  <!-- Header -->
+  <text x="36" y="30" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">DOCFORGE PIPELINE</text>
+  <text x="36" y="56" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">From source content to reader-facing output</text>
+
+  <!-- 5 stage cards: y=70, h=172, each w=136, gap=12 -->
+  <!-- x positions: 36, 184, 332, 480, 628 -->
+
+  <!-- Card 1: Source -->
+  <rect x="36" y="70" width="136" height="172" rx="14" fill="#FFFCF9"/>
+  <rect x="52" y="86" width="36" height="36" rx="10" fill="url(#warm)"/>
+  <path d="M62 98H78" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M62 105H82" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M62 112H76" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <text x="52" y="144" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700">01</text>
+  <text x="52" y="162" fill="#1C1712" font-family="Georgia, serif" font-size="16" font-weight="700">Source</text>
+  <text x="52" y="179" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">
+    <tspan x="52" dy="0">Markdown, YAML</tspan>
+    <tspan x="52" dy="15">frontmatter,</tspan>
+    <tspan x="52" dy="15">version metadata.</tspan>
   </text>
 
-  <g filter="url(#shadow)">
-    <rect x="108" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
-    <rect x="404" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
-    <rect x="700" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
-    <rect x="996" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
-    <rect x="1292" y="372" width="200" height="286" rx="32" fill="#FFFDFC"/>
-  </g>
+  <!-- Arrow 1→2 -->
+  <line x1="174" y1="156" x2="182" y2="156" stroke="#D3B494" stroke-width="4" stroke-linecap="round"/>
+  <path d="M178 151L184 156L178 161" stroke="#D3B494" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <g>
-    <rect x="132" y="398" width="74" height="74" rx="20" fill="url(#accentA)"/>
-    <path d="M157 422H181" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M157 446H214" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M157 470H198" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <text x="132" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">01</text>
-    <text x="132" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Source</text>
-    <text x="132" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
-      <tspan x="132" dy="0">Markdown, frontmatter,</tspan>
-      <tspan x="132" dy="30">metadata, version</tspan>
-      <tspan x="132" dy="30">context.</tspan>
-    </text>
-  </g>
+  <!-- Card 2: Structure -->
+  <rect x="184" y="70" width="136" height="172" rx="14" fill="#FFFCF9"/>
+  <rect x="200" y="86" width="36" height="36" rx="10" fill="url(#cool)"/>
+  <path d="M212 104H222" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M218 96V112" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <text x="200" y="144" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700">02</text>
+  <text x="200" y="162" fill="#1C1712" font-family="Georgia, serif" font-size="16" font-weight="700">Structure</text>
+  <text x="200" y="179" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">
+    <tspan x="200" dy="0">DITA topic typing,</tspan>
+    <tspan x="200" dy="15">taxonomy, content</tspan>
+    <tspan x="200" dy="15">relationships.</tspan>
+  </text>
 
-  <g>
-    <rect x="428" y="398" width="74" height="74" rx="20" fill="url(#accentB)"/>
-    <path d="M448 436H482" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M464 420V454" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="486" cy="426" r="8" fill="white"/>
-    <text x="428" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">02</text>
-    <text x="428" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Structure</text>
-    <text x="428" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
-      <tspan x="428" dy="0">Topic typing, taxonomy,</tspan>
-      <tspan x="428" dy="30">content relationships,</tspan>
-      <tspan x="428" dy="30">and reuse.</tspan>
-    </text>
-  </g>
+  <!-- Arrow 2→3 -->
+  <line x1="322" y1="156" x2="330" y2="156" stroke="#9BCBC1" stroke-width="4" stroke-linecap="round"/>
+  <path d="M326 151L332 156L326 161" stroke="#9BCBC1" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <g>
-    <rect x="724" y="398" width="74" height="74" rx="20" fill="url(#accentA)"/>
-    <path d="M742 452L758 436L772 450L790 424" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="724" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">03</text>
-    <text x="724" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Quality</text>
-    <text x="724" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
-      <tspan x="724" dy="0">Vale rules, terminology,</tspan>
-      <tspan x="724" dy="30">readability, and</tspan>
-      <tspan x="724" dy="30">task-first checks.</tspan>
-    </text>
-  </g>
+  <!-- Card 3: Quality -->
+  <rect x="332" y="70" width="136" height="172" rx="14" fill="#FFFCF9"/>
+  <rect x="348" y="86" width="36" height="36" rx="10" fill="url(#warm)"/>
+  <path d="M358 110L364 117L377 102" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="348" y="144" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700">03</text>
+  <text x="348" y="162" fill="#1C1712" font-family="Georgia, serif" font-size="16" font-weight="700">Quality</text>
+  <text x="348" y="179" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">
+    <tspan x="348" dy="0">Vale linting, style</tspan>
+    <tspan x="348" dy="15">guide checks,</tspan>
+    <tspan x="348" dy="15">readability gates.</tspan>
+  </text>
 
-  <g>
-    <rect x="1020" y="398" width="74" height="74" rx="20" fill="url(#accentB)"/>
-    <path d="M1040 460H1074" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M1068 438L1088 460L1068 482" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="1020" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">04</text>
-    <text x="1020" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Build</text>
-    <text x="1020" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
-      <tspan x="1020" dy="0">HTML, PDF, API specs,</tspan>
-      <tspan x="1020" dy="30">schemas, changelogs,</tspan>
-      <tspan x="1020" dy="30">and packages.</tspan>
-    </text>
-  </g>
+  <!-- Arrow 3→4 -->
+  <line x1="470" y1="156" x2="478" y2="156" stroke="#D3B494" stroke-width="4" stroke-linecap="round"/>
+  <path d="M474 151L480 156L474 161" stroke="#D3B494" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <g>
-    <rect x="1316" y="398" width="74" height="74" rx="20" fill="url(#accentA)"/>
-    <path d="M1338 434H1370V466H1338Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
-    <path d="M1354 466V488" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M1340 488H1368" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <text x="1316" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">05</text>
-    <text x="1316" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Publish</text>
-    <text x="1316" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="21">
-      <tspan x="1316" dy="0">Deploy with status,</tspan>
-      <tspan x="1316" dy="30">analytics, and</tspan>
-      <tspan x="1316" dy="30">governance.</tspan>
-    </text>
-  </g>
+  <!-- Card 4: Build -->
+  <rect x="480" y="70" width="136" height="172" rx="14" fill="#FFFCF9"/>
+  <rect x="496" y="86" width="36" height="36" rx="10" fill="url(#cool)"/>
+  <path d="M506 104H520" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M516 96L526 104L516 112" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="496" y="144" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700">04</text>
+  <text x="496" y="162" fill="#1C1712" font-family="Georgia, serif" font-size="16" font-weight="700">Build</text>
+  <text x="496" y="179" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">
+    <tspan x="496" dy="0">HTML, PDF, API</tspan>
+    <tspan x="496" dy="15">specs, schemas,</tspan>
+    <tspan x="496" dy="15">changelogs.</tspan>
+  </text>
 
-  <path d="M364 510H404" stroke="#D3B494" stroke-width="10" stroke-linecap="round"/>
-  <path d="M660 510H700" stroke="#9BCBC1" stroke-width="10" stroke-linecap="round"/>
-  <path d="M956 510H996" stroke="#D3B494" stroke-width="10" stroke-linecap="round"/>
-  <path d="M1252 510H1292" stroke="#9BCBC1" stroke-width="10" stroke-linecap="round"/>
+  <!-- Arrow 4→5 -->
+  <line x1="618" y1="156" x2="626" y2="156" stroke="#9BCBC1" stroke-width="4" stroke-linecap="round"/>
+  <path d="M622 151L628 156L622 161" stroke="#9BCBC1" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <rect x="108" y="744" width="1384" height="136" rx="28" fill="#1E1914" fill-opacity="0.96"/>
-  <text x="144" y="798" fill="#F9EFE3" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">The point of the prototype</text>
-  <text x="144" y="838" fill="#D8C7B5" font-family="Segoe UI, Arial, sans-serif" font-size="24">
-    <tspan x="144" dy="0">Most teams already have pieces of this stack. The gap is the orchestration layer</tspan>
-    <tspan x="144" dy="30">that makes them behave like one coherent documentation product.</tspan>
+  <!-- Card 5: Publish -->
+  <rect x="628" y="70" width="136" height="172" rx="14" fill="#FFFCF9"/>
+  <rect x="644" y="86" width="36" height="36" rx="10" fill="url(#warm)"/>
+  <rect x="652" y="94" width="20" height="14" rx="2.5" stroke="white" stroke-width="4" fill="none"/>
+  <path d="M662 108V116" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M656 116H668" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <text x="644" y="144" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700">05</text>
+  <text x="644" y="162" fill="#1C1712" font-family="Georgia, serif" font-size="16" font-weight="700">Publish</text>
+  <text x="644" y="179" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="11.5">
+    <tspan x="644" dy="0">Deploy, analytics,</tspan>
+    <tspan x="644" dy="15">governance,</tspan>
+    <tspan x="644" dy="15">versioning.</tspan>
+  </text>
+
+  <!-- Footer dark band -->
+  <rect x="36" y="260" width="728" height="78" rx="12" fill="#1E1914" fill-opacity="0.94"/>
+  <text x="56" y="285" fill="#F9EFE3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700">The point of the prototype</text>
+  <text x="56" y="305" fill="#D8C7B5" font-family="Segoe UI, Arial, sans-serif" font-size="12">
+    <tspan x="56" dy="0">Most teams already have pieces of this stack. The gap is the orchestration layer</tspan>
+    <tspan x="56" dy="17">that makes them behave like one coherent documentation product.</tspan>
   </text>
 </svg>
