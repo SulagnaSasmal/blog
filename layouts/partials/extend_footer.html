@@ -1,2 +1,6 @@
 {{ $js := resources.Get "js/custom.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
+
+{{- if and .IsPage (eq .Section "posts") }}
+{{- partial "post-interactions.html" . }}
+{{- end }}

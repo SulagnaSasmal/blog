@@ -100,6 +100,71 @@ document.addEventListener("click", function (event) {
   link.closest(".demo-body").classList.add("active");
 });
 
+function setupLikeButton() {
+  var btn = document.querySelector(".like-btn");
+  if (!btn) {
+    return;
+  }
+
+  var url = btn.dataset.url;
+  var storageKey = "liked:" + url;
+  var heart = btn.querySelector(".like-heart");
+
+  if (localStorage.getItem(storageKey)) {
+    btn.classList.add("liked");
+    if (heart) {
+      heart.innerHTML = "&#9829;";
+    }
+  }
+
+  btn.addEventListener("click", function () {
+    var isLiked = btn.classList.toggle("liked");
+    if (heart) {
+      heart.innerHTML = isLiked ? "&#9829;" : "&#9825;";
+    }
+    if (isLiked) {
+      localStorage.setItem(storageKey, "1");
+    } else {
+      localStorage.removeItem(storageKey);
+    }
+  });
+}
+
+function setupCopyLink() {
+  var btns = document.querySelectorAll(".share-copy");
+
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var url = btn.dataset.url;
+      if (!url) {
+        return;
+      }
+
+      navigator.clipboard.writeText(url).then(function () {
+        var orig = btn.textContent;
+        btn.textContent = "Copied!";
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.textContent = orig;
+          btn.classList.remove("copied");
+        }, 2000);
+      }).catch(function () {
+        // fallback: select text in a temp input
+        var inp = document.createElement("input");
+        inp.value = url;
+        document.body.appendChild(inp);
+        inp.select();
+        document.execCommand("copy");
+        document.body.removeChild(inp);
+        btn.textContent = "Copied!";
+        setTimeout(function () {
+          btn.textContent = "Copy link";
+        }, 2000);
+      });
+    });
+  });
+}
+
 window.addEventListener("scroll", updateScrollProgress, { passive: true });
 window.addEventListener("resize", updateScrollProgress);
 document.addEventListener("DOMContentLoaded", function () {
@@ -107,4 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updateScrollProgress();
   revealOnScroll();
   setupInteractiveCards();
+  setupLikeButton();
+  setupCopyLink();
 });

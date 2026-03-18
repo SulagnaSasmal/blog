@@ -1,0 +1,47 @@
+<div class="post-interactions">
+
+  <div class="interaction-row">
+    <button class="like-btn" data-url="{{ .RelPermalink }}" aria-label="Mark as useful">
+      <span class="like-heart" aria-hidden="true">&#9825;</span>
+      <span class="like-text">Found this useful</span>
+    </button>
+
+    <div class="share-group">
+      <span class="share-label">Share</span>
+      <a class="share-btn"
+         href="https://twitter.com/intent/tweet?text={{ .Title | urlquery }}&url={{ .Permalink | urlquery }}"
+         target="_blank" rel="noopener noreferrer">X / Twitter</a>
+      <a class="share-btn"
+         href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}"
+         target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <button class="share-btn share-copy" data-url="{{ .Permalink }}">Copy link</button>
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <h3 class="comments-heading">Discussion</h3>
+    <p class="comments-sub">Have a question or a different take? Drop a comment below. GitHub account required.</p>
+    <script src="https://giscus.app/client.js"
+      data-repo="SulagnaSasmal/blog"
+      data-repo-id="R_kgDORpyPjA"
+      data-category="General"
+      data-category-id=""
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      crossorigin="anonymous"
+      async>
+    </script>
+    <noscript>
+      <p class="comments-fallback">
+        Comments require JavaScript. You can also
+        <a href="mailto:sulagna@sulagnasasmal.com?subject=Re: {{ .Title | urlquery }}">reply by email</a>.
+      </p>
+    </noscript>
+  </div>
+
+</div>

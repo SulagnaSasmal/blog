@@ -1,164 +1,56 @@
 {{- define "main" }}
-{{- $about := site.GetPage "/about" }}
 {{- $posts := where site.RegularPages "Section" "posts" }}
 {{- $posts = where $posts "Draft" false }}
 {{- $posts = sort $posts "Date" "desc" }}
 {{- $featured := first 1 $posts }}
-{{- $recent := first 4 $posts }}
-{{- $postsPage := site.GetPage "/posts" }}
+{{- $archive := after 1 $posts }}
 
-<div class="custom-home">
-  <section class="hero-shell reveal-on-scroll" data-reveal="up">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <span class="hero-badge">Documentation Engineering Portfolio</span>
-        <h1 class="hero-title">I design documentation systems that make complex products easier to ship, use, and trust.</h1>
-        <p class="hero-text">Technical writing, docs architecture, developer onboarding, and interactive product storytelling from the perspective of someone who has spent years building the pipeline behind the pages.</p>
-        <div class="hero-proof-grid stagger-children">
-          <div class="hero-proof-item stagger-item">
-            <span class="hero-proof-label">Domains</span>
-            <strong>FinTech, compliance, enterprise platforms</strong>
-          </div>
-          <div class="hero-proof-item stagger-item">
-            <span class="hero-proof-label">Specialty</span>
-            <strong>Docs systems, onboarding, and structured content</strong>
-          </div>
-          <div class="hero-proof-item stagger-item">
-            <span class="hero-proof-label">Output</span>
-            <strong>Operational clarity for teams shipping complex products</strong>
-          </div>
-        </div>
-        <div class="hero-actions">
-          {{- range $featured }}
-          <a class="button-pill button-pill-primary interactive-card" data-tilt href="{{ .RelPermalink }}">Read the latest build story</a>
-          {{- end }}
-          {{- with $about }}
-          <a class="button-pill button-pill-secondary interactive-card" data-tilt href="{{ .RelPermalink }}">Explore About</a>
-          {{- end }}
-        </div>
+<div class="blog-home">
+
+  <header class="blog-intro reveal-on-scroll">
+    <p class="blog-intro-text">Notes from documentation engineering work. Design decisions, tools I studied, challenges, and observations from building documentation systems in FinTech, compliance, and enterprise platforms.</p>
+    <nav class="blog-ref-links">
+      <a href="https://sulagnasasmal.com" target="_blank" rel="noopener">Portfolio ↗</a>
+      <a href="https://github.com/SulagnaSasmal" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://linkedin.com/in/sulagnasasmal" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </nav>
+  </header>
+
+  {{- range $featured }}
+  <article class="post-lead reveal-on-scroll" data-reveal="up">
+    <div class="post-lead-header">
+      <time class="post-lead-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      <div class="post-lead-tags">
+        {{- range first 3 .Params.tags }}
+        <span class="post-tag">{{ . }}</span>
+        {{- end }}
       </div>
-
-      <aside class="hero-panel interactive-card reveal-on-scroll" data-tilt data-reveal="left" data-reveal-delay="120">
-        <div class="hero-panel-header">
-          <span class="hero-panel-kicker">Current focus</span>
-          <span class="hero-panel-status">Open for docs platform work</span>
-        </div>
-        <div class="signal-stack stagger-children">
-          <div class="signal-card stagger-item">
-            <span class="signal-label">Practice</span>
-            <strong>API docs, docs-as-code, information architecture</strong>
-          </div>
-          <div class="signal-card stagger-item">
-            <span class="signal-label">Approach</span>
-            <strong>Structured content, quality gates, and developer-first onboarding</strong>
-          </div>
-          <div class="signal-card stagger-item">
-            <span class="signal-label">Output</span>
-            <strong>Systems thinking translated into clear content and usable interfaces</strong>
-          </div>
-        </div>
-      </aside>
     </div>
-  </section>
+    <h2 class="post-lead-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p class="post-lead-desc">{{ .Description | default (.Summary | plainify) }}</p>
+    <a class="post-lead-cta" href="{{ .RelPermalink }}">Read this post</a>
+  </article>
+  {{- end }}
 
-  <section class="section-shell reveal-on-scroll" data-reveal="up" data-reveal-delay="80">
-    <div class="section-heading-row">
-      <div>
-        <span class="section-kicker">Selected work</span>
-        <h2 class="section-title">Portfolio-style entry points instead of a generic blog roll</h2>
-      </div>
-      <p class="section-copy">The homepage now surfaces identity, capabilities, and writing as a set of crafted cards. Visitors can understand the shape of the work before they ever scan a post list.</p>
-    </div>
-
-    <div class="portfolio-grid stagger-children">
-      {{- with $about }}
-      <article class="portfolio-card portfolio-card-about interactive-card stagger-item" data-tilt>
-        <span class="card-kicker">About</span>
-        <span class="card-strapline">Profile snapshot</span>
-        <h3 class="card-title">Documentation engineer, information architect, and AI tools builder.</h3>
-        <p class="card-summary">{{ .Content | plainify | truncate 190 }}</p>
-        <div class="card-meta-row">
-          <span class="meta-chip">Strategy</span>
-          <span class="meta-chip">Systems</span>
-          <span class="meta-chip">Clarity</span>
-        </div>
-        <a class="card-link" href="{{ .RelPermalink }}">View profile</a>
-      </article>
-      {{- end }}
-
-      {{- range $featured }}
-      <article class="portfolio-card portfolio-card-featured interactive-card stagger-item" data-tilt>
-        <span class="card-kicker">Featured article</span>
-        <span class="card-strapline">Build log</span>
-        <h3 class="card-title">{{ .Title }}</h3>
-        <p class="card-summary">{{ .Description | default (.Summary | plainify) }}</p>
-        <div class="card-meta-row">
-          <span class="meta-detail">{{ .Date.Format "Jan 2, 2006" }}</span>
+  {{- if $archive }}
+  <section class="post-archive stagger-children">
+    <h3 class="archive-label">Earlier posts</h3>
+    {{- range $archive }}
+    <article class="post-row stagger-item">
+      <time class="post-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+      <div class="post-row-body">
+        <h3 class="post-row-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="post-row-desc">{{ .Description | default (.Summary | plainify | truncate 160) }}</p>
+        <div class="post-row-tags">
           {{- range first 2 .Params.tags }}
-          <span class="meta-chip">{{ . }}</span>
+          <span class="post-tag">{{ . }}</span>
           {{- end }}
         </div>
-        <a class="card-link" href="{{ .RelPermalink }}">Read article</a>
-      </article>
-      {{- end }}
-    </div>
-  </section>
-
-  <section class="section-shell reveal-on-scroll" data-reveal="up" data-reveal-delay="120">
-    <div class="section-heading-row compact-heading-row">
-      <div>
-        <span class="section-kicker">Recent writing</span>
-        <h2 class="section-title">Posts presented as work samples</h2>
       </div>
-      {{- with $postsPage }}
-      <a class="section-link" href="{{ .RelPermalink }}">See all posts</a>
-      {{- else }}
-      <a class="section-link" href="{{ "posts/" | relURL }}">See all posts</a>
-      {{- end }}
-    </div>
-
-    <div class="post-card-grid stagger-children">
-      {{- range $recent }}
-      <article class="portfolio-card portfolio-post-card interactive-card stagger-item" data-tilt>
-        <span class="card-kicker">{{ .Date.Format "Jan 2006" }}</span>
-        <h3 class="card-title">{{ .Title }}</h3>
-        <p class="card-summary">{{ .Description | default (.Summary | plainify) }}</p>
-        <div class="tag-row">
-          {{- range first 3 .Params.tags }}
-          <span class="meta-chip">{{ . }}</span>
-          {{- end }}
-        </div>
-        <a class="card-link" href="{{ .RelPermalink }}">Open post</a>
-      </article>
-      {{- end }}
-    </div>
+    </article>
+    {{- end }}
   </section>
+  {{- end }}
 
-  <section class="section-shell section-shell-alt reveal-on-scroll" data-reveal="up" data-reveal-delay="160">
-    <div class="section-heading-row compact-heading-row">
-      <div>
-        <span class="section-kicker">Working style</span>
-        <h2 class="section-title">How I approach documentation systems</h2>
-      </div>
-    </div>
-
-    <div class="principle-grid stagger-children">
-      <article class="principle-card interactive-card stagger-item" data-tilt>
-        <span class="principle-number">01</span>
-        <h3>Structure first</h3>
-        <p>Metadata, taxonomy, and content models need to be designed as part of the system, not retrofitted after publication problems appear.</p>
-      </article>
-      <article class="principle-card interactive-card stagger-item" data-tilt>
-        <span class="principle-number">02</span>
-        <h3>Quality gates that matter</h3>
-        <p>Linting, review workflows, and release checks should reflect actual documentation risks, not just generic style preferences.</p>
-      </article>
-      <article class="principle-card interactive-card stagger-item" data-tilt>
-        <span class="principle-number">03</span>
-        <h3>Portfolio, not archive</h3>
-        <p>The site should frame writing as evidence of practice. Each page needs to help visitors understand the craft behind the output.</p>
-      </article>
-    </div>
-  </section>
 </div>
 {{- end }}
