@@ -9,7 +9,6 @@ description: "I spent twenty years assembling documentation pipelines from a pat
 
 Documentation engineers build the infrastructure that ships products to readers. We wire up Git repos, configure linters, write CI/CD workflows, wrangle multi-format outputs, and maintain content taxonomies. We do all of this across a patchwork of tools that were never designed to work together.
 Copilot writes prose faster. GitBook gives you somewhere to publish. Vale catches style violations. But no single tool treats the pipeline from source to reader as one system. I went looking for one. I couldn't find it. So I built a prototype to see what it would look like.
-DocForge is an interactive prototype of a Docs-as-Code platform: six modules that show what the full documentation pipeline looks like when you put it under one roof. No login. No signup. Click through the whole thing in under five minutes.
 This post is a build log. What I built, why I made the choices I made, and what I learned along the way.
 
 {{< figure src="/images/docforge-pipeline-overview.svg" alt="Flow chart showing the DocForge pipeline from source to structure to quality to build to publish" caption="DocForge is meant to make the documentation pipeline legible. The point is not just better writing tools. The point is a system where source, structure, quality, build, and publishing are connected." class="flow-figure reveal-on-scroll" >}}
@@ -20,15 +19,15 @@ The diagram above is the shortest version of the pitch: documentation teams do n
 
 DocForge is a working interactive demo with six modules, each representing a stage of the documentation pipeline:
 
-**Module 1: Dashboard.** Pipeline health at a glance. Build history with commit hashes and pass/fail statuisn'tent metrics broken down by DITA topic type. Contributor activity. Open doc issues. This is the module I wished existed at every company I have worked at, a single view that tells you whether your docs pipeline is healthy or broken without opening five different tools.
+**Module 1: Dashboard.** Build history with commit hashes and pass/fail status metrics broken down by DITA topic type. Contributor activity. Open doc issues. This is the module I wished existed at every company I have worked at, a single view that tells you whether your docs pipeline is healthy or broken without opening five different tools.
 
-**Module 2: Editor.** A live Markdown editor with YAML frontmatter and real-time preview. The frontmatter isn't decorative. It carries structured metadata: topic type, audience, version, sidebar position, tags. This is what lets the rest of the pipeline treat content as structured data instead of flat files.
+**Module 2: Editor.** The YAML frontmatter isn't decorative. It carries structured metadata: topic type, audience, version, sidebar position, tags. This is what lets the rest of the pipeline treat content as structured data instead of flat files.
 
 **Module 3: Content Map.** A DITA-based topic taxonomy showing how every document is classified: Concept, Task, Reference, Tutorial, Troubleshoot. This is the module that probably needs the most explanation, so I will come back to it.
 
-**Module 4: Style Linter.** Automated quality checks running Vale rules against Microsoft Writing Style Guide standards. The demo shows a score of 94 with seven findings across four files, includon'tpassive voice flag, a task-first structure violation, a readability warning, and a terminology inconsistency. These are not generic linting categories. They are the exact kinds of issues I have spent years fixing in real documentation reviews.
+**Module 4: Style Linter.** Automated quality checks running Vale rules against Microsoft Writing Style Guide standards. The demo shows a score of 94 with seven findings across four files, including a passive voice flag, a task-first structure violation, a readability warning, and a terminology inconsistency. These are not generic linting categories. They are the exact kinds of issues I have spent years fixing in real documentation reviews.
 
-**Module 5: Build Outputs.** Six formats generated from a single Markdown source: static HTML, PDF, OpenAPI spec, JSON schema, Postman collection, and changelog. The fundamental promise of Docs-as-Code is that your source is your single source of truth and everything else is a build artifact. This module shows what that looks like in practice.
+**Module 5: Build Outputs.** Six formats generated from a single Markdown source: static HTML, PDF, OpenAPI spec, JSON schema, Postman collection, and changelog. The fundamental promise of Docs-as-Code is that your source is your single source of truth and everything else is a build artifact.
 
 **Module 6: Configuration.** A full docforge.config.yml with toggleable settings for build, lint, deploy, versioning, search, and analytics. Environment-aware. The kind of config file that every Docs-as-Code project eventually needs and nobody enjoys writing from scratch.
 
@@ -86,13 +85,13 @@ That is the gap DocForge is pointing at. Not a missing feature in an existing to
 
 ## What this prototype is and is not
 
-I want to be direct about the boundaries. DocForge is an interactive prototype. It is a working demo that shows what a Docs-as-Code platform could look like if someone built it as an integrated system. The editor renders real Markdown. The linter findings are realistic. The build outputs show real format previews. The config file is a real YAML structure that could drive a real pipeline.
+DocForge is an interactive prototype. It is a working demo that shows what a Docs-as-Code platform could look like if someone built it as an integrated system. The editor renders real Markdown. The linter findings are realistic. The build outputs show real format previews. The config file is a real YAML structure that could drive a real pipeline.
 
 It is not a production tool. There is no backend processing Markdown through an actual Vale server. The build outputs are previews, not generated artifacts. The Git integration is simulated.
 
 I built it as a portfolio piece to show that I understand the infrastructure behind the docs, not just the writing. But as I built it, I kept thinking: this should actually exist. Not as a demo. As a product.
 
-I am figuring out what the real product looks like.
+The real product is what I am building toward.
 
 # **One question**
 
