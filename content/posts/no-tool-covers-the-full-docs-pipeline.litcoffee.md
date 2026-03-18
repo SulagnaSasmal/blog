@@ -16,7 +16,7 @@ This post is a build log. What I built, why I made the choices I made, and what 
 
 The diagram above is the shortest version of the pitch: documentation teams do not just need a place to write. They need a pipeline they can understand, audit, and improve.
 
-# **What DocForge actually is**
+## What DocForge actually is
 
 DocForge is a working interactive demo with six modules, each representing a stage of the documentation pipeline:
 
@@ -37,7 +37,7 @@ The demo uses a fictional project called "ACME Platform Documentation" with 147 
 {{< figure src="/images/docforge-tooling-gap.svg" alt="Comparison diagram showing a fragmented documentation toolchain on one side and an integrated DocForge platform on the other" caption="The gap is not a missing single feature. It is the absence of an orchestration layer built specifically for documentation teams." class="flow-figure reveal-on-scroll" >}}
 
 
-# **Why DITA topic typing in a Docs-as-Code prototype**
+## Why DITA topic typing in a Docs-as-Code prototype
 
 This is the design decision I expect the most questions about. DITA (Darwin Information Typing Architecture) is an XML-based content standard. Docs-as-Code is Markdown and Git. These two worlds do not usually talk to each other.
 
@@ -50,7 +50,7 @@ The problem I have seen repeatedly in enterprise documentation is not that write
 DocForge borrows the taxonomy without importing the overhead. Content is still Markdown. The topic type lives in YAML frontmatter. The Content Map module visualizes the taxonomy. The Style Linter includes a custom TaskFirst rule that flags task topics that open with background context instead of the user's goal.
 This is the kind of structural enforcement that no off-the-shelf tool gives you. Confluence does not care whether your page is a concept or a task. GitBook does not validate topic structure. And AI writing assistants have no concept of information architecture at all.
 
-# **What the linter actually catches**
+## What the linter actually catches
 
 The Style Linter module is the one I am most particular about because I have spent years doing exactly this work manually. Let me walk through the seven findings in the demo because they illustrate the kinds of quality problems that slip through in real documentation all the time.
 
@@ -71,7 +71,7 @@ The Style Linter module is the one I am most particular about because I have spe
 These are not theoretical lint rules. Every single one of them comes from a real problem I have encountered in production documentation.
 
 
-# **The gap this prototype is pointing at**
+## The gap this prototype is pointing at
 
 I have spent close to twenty years writing documentation for enterprise platforms: FinTech, financial crime compliance, payments, investment banking, enterprise communications. I have used MadCap Flare, DITA/XML authoring tools, Confluence, GitHub wikis, Docs-as-Code with Markdown and static site generators, and more recently, AI-assisted writing tools.
 
@@ -84,7 +84,7 @@ Copilot and other AI writing tools are solving a different problem entirely. The
 GitBook, Confluence, Mintlify, and ReadMe are publishing platforms. They give you somewhere to put your docs. They don't engineer the pipeline that produces them. There is a real difference between a writer who uses a docs tool and an engineer who builds the infrastructure behind it.
 That is the gap DocForge is pointing at. Not a missing feature in an existing tool. A missing category of tool altogether.
 
-# **What this prototype is and is not**
+## What this prototype is and is not
 
 I want to be direct about the boundaries. DocForge is an interactive prototype. It is a working demo that shows what a Docs-as-Code platform could look like if someone built it as an integrated system. The editor renders real Markdown. The linter findings are realistic. The build outputs show real format previews. The config file is a real YAML structure that could drive a real pipeline.
 

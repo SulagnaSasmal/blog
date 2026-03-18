@@ -20,7 +20,10 @@
   <rect width="1600" height="980" rx="40" fill="url(#bg2)"/>
   <text x="108" y="118" fill="#6E5645" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3.2">FRAGMENTED TOOLS VS INTEGRATED SYSTEM</text>
   <text x="108" y="178" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700">Why the current docs stack still feels broken</text>
-  <text x="108" y="228" fill="#5E5146" font-family="Segoe UI, Arial, sans-serif" font-size="28">The real pain is not that tools are missing. It is that teams are forced to become the integration layer.</text>
+  <text x="108" y="228" fill="#5E5146" font-family="Segoe UI, Arial, sans-serif" font-size="28">
+    <tspan x="108" dy="0">The real pain is not that tools are missing.</tspan>
+    <tspan x="108" dy="36">It is that teams are forced to become the integration layer.</tspan>
+  </text>
 
   <g filter="url(#softShadow)">
     <rect x="108" y="300" width="636" height="548" rx="34" fill="#FFFDFC"/>
@@ -37,11 +40,11 @@
     <rect x="390" y="580" width="188" height="84" rx="22" fill="#F1E1D2"/>
     <rect x="268" y="704" width="188" height="84" rx="22" fill="#F1E1D2"/>
 
-    <text x="182" y="507" fill="#FFF8F1" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Writer + Git</text>
-    <text x="424" y="507" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Style Linter</text>
-    <text x="180" y="631" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">CI/CD</text>
-    <text x="420" y="631" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Static Site</text>
-    <text x="300" y="755" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Analytics</text>
+    <text x="182" y="507" fill="#FFF8F1" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Writer + Git</text>
+    <text x="424" y="507" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Style Linter</text>
+    <text x="180" y="631" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">CI/CD</text>
+    <text x="420" y="631" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Static Site</text>
+    <text x="300" y="755" fill="#5B4C40" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Analytics</text>
 
     <path d="M336 498H390" stroke="#D2A785" stroke-width="9" stroke-dasharray="10 14" stroke-linecap="round"/>
     <path d="M242 540V580" stroke="#D2A785" stroke-width="9" stroke-dasharray="10 14" stroke-linecap="round"/>
@@ -49,7 +52,10 @@
     <path d="M336 664L336 704" stroke="#D2A785" stroke-width="9" stroke-dasharray="10 14" stroke-linecap="round"/>
   </g>
 
-  <text x="148" y="894" fill="#6C5A4D" font-family="Segoe UI, Arial, sans-serif" font-size="24">Outcome: duplicated setup, brittle handoffs, tribal knowledge, and no single operational view.</text>
+  <text x="148" y="894" fill="#6C5A4D" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    <tspan x="148" dy="0">Outcome: duplicated setup, brittle handoffs, tribal knowledge,</tspan>
+    <tspan x="148" dy="30">and no single operational view.</tspan>
+  </text>
 
   <text x="896" y="360" fill="#0D7A74" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2.4">DOCFORGE DIRECTION</text>
   <text x="896" y="410" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Integrated documentation platform</text>
@@ -63,16 +69,22 @@
     <rect x="1110" y="594" width="136" height="72" rx="18" fill="#F5FCFB" fill-opacity="0.18"/>
     <rect x="1264" y="594" width="136" height="72" rx="18" fill="#F5FCFB" fill-opacity="0.18"/>
 
-    <text x="956" y="556" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Dashboard</text>
-    <text x="1110" y="556" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Editor</text>
-    <text x="1264" y="556" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Map</text>
-    <text x="956" y="646" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Linter</text>
-    <text x="1110" y="646" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Outputs</text>
-    <text x="1264" y="646" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Config</text>
+    <text x="956" y="556" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Dashboard</text>
+    <text x="1110" y="556" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Editor</text>
+    <text x="1264" y="556" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Map</text>
+    <text x="956" y="646" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Linter</text>
+    <text x="1110" y="646" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Outputs</text>
+    <text x="1264" y="646" fill="#F9FFFE" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Config</text>
   </g>
 
-  <rect x="956" y="752" width="436" height="54" rx="18" fill="#E6F6F3"/>
-  <text x="984" y="787" fill="#195851" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">One source of truth. One system of checks. One operational view.</text>
+  <rect x="956" y="742" width="436" height="74" rx="18" fill="#E6F6F3"/>
+  <text x="984" y="777" fill="#195851" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">
+    <tspan x="984" dy="0">One source of truth.</tspan>
+    <tspan x="984" dy="26">One system of checks. One operational view.</tspan>
+  </text>
 
-  <text x="896" y="894" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">Outcome: shared metadata, visible quality gates, reusable outputs, and less pipeline glue work.</text>
+  <text x="896" y="894" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    <tspan x="896" dy="0">Outcome: shared metadata, visible quality gates, reusable outputs,</tspan>
+    <tspan x="896" dy="30">and less pipeline glue work.</tspan>
+  </text>
 </svg>

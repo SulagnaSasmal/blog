@@ -14,6 +14,18 @@ theme = "PaperMod"
   ShowCodeCopyButtons = true
   defaultTheme = "auto"   # respects OS dark/light preference
 
+  [params.assets]
+    favicon = "favicon.svg"
+    favicon16x16 = "favicon.svg"
+    favicon32x32 = "favicon.svg"
+    apple_touch_icon = "favicon.svg"
+    safari_pinned_tab = "safari-pinned-tab.svg"
+    theme_color = "#b46836"
+    msapplication_TileColor = "#b46836"
+
+  [params.footer]
+    text = "[Portfolio](https://sulagnasasmal.com/)"
+
 [menu]
   [[menu.main]]
     name = "Posts"
@@ -23,6 +35,10 @@ theme = "PaperMod"
     name = "About"
     url = "/about/"
     weight = 2
+  [[menu.main]]
+    name = "Portfolio"
+    url = "https://sulagnasasmal.com/"
+    weight = 3
 
 [pagination]
   pagerSize = 10

@@ -5,6 +5,7 @@
 {{- $posts = sort $posts "Date" "desc" }}
 {{- $featured := first 1 $posts }}
 {{- $recent := first 4 $posts }}
+{{- $postsPage := site.GetPage "/posts" }}
 
 <div class="custom-home">
   <section class="hero-shell reveal-on-scroll" data-reveal="up">
@@ -13,6 +14,20 @@
         <span class="hero-badge">Documentation Engineering Portfolio</span>
         <h1 class="hero-title">I design documentation systems that make complex products easier to ship, use, and trust.</h1>
         <p class="hero-text">Technical writing, docs architecture, developer onboarding, and interactive product storytelling from the perspective of someone who has spent years building the pipeline behind the pages.</p>
+        <div class="hero-proof-grid stagger-children">
+          <div class="hero-proof-item stagger-item">
+            <span class="hero-proof-label">Domains</span>
+            <strong>FinTech, compliance, enterprise platforms</strong>
+          </div>
+          <div class="hero-proof-item stagger-item">
+            <span class="hero-proof-label">Specialty</span>
+            <strong>Docs systems, onboarding, and structured content</strong>
+          </div>
+          <div class="hero-proof-item stagger-item">
+            <span class="hero-proof-label">Output</span>
+            <strong>Operational clarity for teams shipping complex products</strong>
+          </div>
+        </div>
         <div class="hero-actions">
           {{- range $featured }}
           <a class="button-pill button-pill-primary interactive-card" data-tilt href="{{ .RelPermalink }}">Read the latest build story</a>
@@ -59,6 +74,7 @@
       {{- with $about }}
       <article class="portfolio-card portfolio-card-about interactive-card stagger-item" data-tilt>
         <span class="card-kicker">About</span>
+        <span class="card-strapline">Profile snapshot</span>
         <h3 class="card-title">Documentation engineer, information architect, and AI tools builder.</h3>
         <p class="card-summary">{{ .Content | plainify | truncate 190 }}</p>
         <div class="card-meta-row">
@@ -73,6 +89,7 @@
       {{- range $featured }}
       <article class="portfolio-card portfolio-card-featured interactive-card stagger-item" data-tilt>
         <span class="card-kicker">Featured article</span>
+        <span class="card-strapline">Build log</span>
         <h3 class="card-title">{{ .Title }}</h3>
         <p class="card-summary">{{ .Description | default (.Summary | plainify) }}</p>
         <div class="card-meta-row">
@@ -93,7 +110,11 @@
         <span class="section-kicker">Recent writing</span>
         <h2 class="section-title">Posts presented as work samples</h2>
       </div>
-      <a class="section-link" href="{{ "/posts/" | relURL }}">See all posts</a>
+      {{- with $postsPage }}
+      <a class="section-link" href="{{ .RelPermalink }}">See all posts</a>
+      {{- else }}
+      <a class="section-link" href="{{ "posts/" | relURL }}">See all posts</a>
+      {{- end }}
     </div>
 
     <div class="post-card-grid stagger-children">

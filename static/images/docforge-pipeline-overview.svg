@@ -1,4 +1,4 @@
-<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="240" y1="64" x2="1360" y2="836" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF7EC"/>
@@ -12,86 +12,107 @@
       <stop stop-color="#0D7A74"/>
       <stop offset="1" stop-color="#2A9D8F"/>
     </linearGradient>
-    <filter id="shadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="shadow" x="0" y="0" width="1600" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#2F2418" flood-opacity="0.16"/>
     </filter>
   </defs>
 
-  <rect width="1600" height="900" rx="42" fill="url(#bg)"/>
+  <rect width="1600" height="980" rx="42" fill="url(#bg)"/>
   <circle cx="196" cy="164" r="188" fill="#E9C89E" fill-opacity="0.22"/>
   <circle cx="1396" cy="168" r="154" fill="#7FD3C4" fill-opacity="0.18"/>
   <circle cx="1348" cy="780" r="210" fill="#E0A2A2" fill-opacity="0.12"/>
 
   <text x="108" y="126" fill="#6E5645" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3.2">DOCFORGE PIPELINE</text>
   <text x="108" y="186" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700">From source content to reader-facing output</text>
-  <text x="108" y="236" fill="#5E5146" font-family="Segoe UI, Arial, sans-serif" font-size="28">A single documentation system should connect structure, quality, build, and publishing instead of leaving teams to glue them together.</text>
+  <text x="108" y="236" fill="#5E5146" font-family="Segoe UI, Arial, sans-serif" font-size="28">
+    <tspan x="108" dy="0">A single documentation system should connect structure, quality, build, and publishing</tspan>
+    <tspan x="108" dy="36">instead of leaving teams to glue them together by hand.</tspan>
+  </text>
 
   <g filter="url(#shadow)">
-    <rect x="108" y="334" width="256" height="264" rx="32" fill="#FFFDFC"/>
-    <rect x="404" y="334" width="256" height="264" rx="32" fill="#FFFDFC"/>
-    <rect x="700" y="334" width="256" height="264" rx="32" fill="#FFFDFC"/>
-    <rect x="996" y="334" width="256" height="264" rx="32" fill="#FFFDFC"/>
-    <rect x="1292" y="334" width="200" height="264" rx="32" fill="#FFFDFC"/>
+    <rect x="108" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
+    <rect x="404" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
+    <rect x="700" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
+    <rect x="996" y="372" width="256" height="286" rx="32" fill="#FFFDFC"/>
+    <rect x="1292" y="372" width="200" height="286" rx="32" fill="#FFFDFC"/>
   </g>
 
   <g>
-    <rect x="132" y="358" width="74" height="74" rx="20" fill="url(#accentA)"/>
-    <path d="M157 382H181" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M157 406H214" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M157 430H198" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <text x="132" y="474" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">01</text>
-    <text x="132" y="516" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Source</text>
-    <text x="132" y="556" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">Markdown, frontmatter,</text>
-    <text x="132" y="588" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">metadata, version context.</text>
+    <rect x="132" y="398" width="74" height="74" rx="20" fill="url(#accentA)"/>
+    <path d="M157 422H181" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <path d="M157 446H214" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <path d="M157 470H198" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <text x="132" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">01</text>
+    <text x="132" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Source</text>
+    <text x="132" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+      <tspan x="132" dy="0">Markdown, frontmatter,</tspan>
+      <tspan x="132" dy="30">metadata, version</tspan>
+      <tspan x="132" dy="30">context.</tspan>
+    </text>
   </g>
 
   <g>
-    <rect x="428" y="358" width="74" height="74" rx="20" fill="url(#accentB)"/>
-    <path d="M448 396H482" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M464 380V414" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="486" cy="386" r="8" fill="white"/>
-    <text x="428" y="474" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">02</text>
-    <text x="428" y="516" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Structure</text>
-    <text x="428" y="556" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">Topic typing, taxonomy,</text>
-    <text x="428" y="588" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">content relationships, reuse.</text>
+    <rect x="428" y="398" width="74" height="74" rx="20" fill="url(#accentB)"/>
+    <path d="M448 436H482" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <path d="M464 420V454" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="486" cy="426" r="8" fill="white"/>
+    <text x="428" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">02</text>
+    <text x="428" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Structure</text>
+    <text x="428" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+      <tspan x="428" dy="0">Topic typing, taxonomy,</tspan>
+      <tspan x="428" dy="30">content relationships,</tspan>
+      <tspan x="428" dy="30">and reuse.</tspan>
+    </text>
   </g>
 
   <g>
-    <rect x="724" y="358" width="74" height="74" rx="20" fill="url(#accentA)"/>
-    <path d="M742 412L758 396L772 410L790 384" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="724" y="474" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">03</text>
-    <text x="724" y="516" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Quality</text>
-    <text x="724" y="556" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">Vale rules, terminology,</text>
-    <text x="724" y="588" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">readability, task-first checks.</text>
+    <rect x="724" y="398" width="74" height="74" rx="20" fill="url(#accentA)"/>
+    <path d="M742 452L758 436L772 450L790 424" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="724" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">03</text>
+    <text x="724" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Quality</text>
+    <text x="724" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+      <tspan x="724" dy="0">Vale rules, terminology,</tspan>
+      <tspan x="724" dy="30">readability, and</tspan>
+      <tspan x="724" dy="30">task-first checks.</tspan>
+    </text>
   </g>
 
   <g>
-    <rect x="1020" y="358" width="74" height="74" rx="20" fill="url(#accentB)"/>
-    <path d="M1040 420H1074" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M1068 398L1088 420L1068 442" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="1020" y="474" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">04</text>
-    <text x="1020" y="516" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Build</text>
-    <text x="1020" y="556" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">HTML, PDF, API specs,</text>
-    <text x="1020" y="588" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">schemas, changelogs, packages.</text>
+    <rect x="1020" y="398" width="74" height="74" rx="20" fill="url(#accentB)"/>
+    <path d="M1040 460H1074" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1068 438L1088 460L1068 482" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1020" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">04</text>
+    <text x="1020" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Build</text>
+    <text x="1020" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+      <tspan x="1020" dy="0">HTML, PDF, API specs,</tspan>
+      <tspan x="1020" dy="30">schemas, changelogs,</tspan>
+      <tspan x="1020" dy="30">and packages.</tspan>
+    </text>
   </g>
 
   <g>
-    <rect x="1316" y="358" width="74" height="74" rx="20" fill="url(#accentA)"/>
-    <path d="M1338 394H1370V426H1338Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
-    <path d="M1354 426V448" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <path d="M1340 448H1368" stroke="white" stroke-width="8" stroke-linecap="round"/>
-    <text x="1316" y="474" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">05</text>
-    <text x="1316" y="516" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Publish</text>
-    <text x="1316" y="556" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">Deploy with status,</text>
-    <text x="1316" y="588" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="24">analytics, and governance.</text>
+    <rect x="1316" y="398" width="74" height="74" rx="20" fill="url(#accentA)"/>
+    <path d="M1338 434H1370V466H1338Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M1354 466V488" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1340 488H1368" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <text x="1316" y="514" fill="#8C6E56" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">05</text>
+    <text x="1316" y="556" fill="#1C1712" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700">Publish</text>
+    <text x="1316" y="596" fill="#5A4E43" font-family="Segoe UI, Arial, sans-serif" font-size="21">
+      <tspan x="1316" dy="0">Deploy with status,</tspan>
+      <tspan x="1316" dy="30">analytics, and</tspan>
+      <tspan x="1316" dy="30">governance.</tspan>
+    </text>
   </g>
 
-  <path d="M364 466H404" stroke="#D3B494" stroke-width="10" stroke-linecap="round"/>
-  <path d="M660 466H700" stroke="#9BCBC1" stroke-width="10" stroke-linecap="round"/>
-  <path d="M956 466H996" stroke="#D3B494" stroke-width="10" stroke-linecap="round"/>
-  <path d="M1252 466H1292" stroke="#9BCBC1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M364 510H404" stroke="#D3B494" stroke-width="10" stroke-linecap="round"/>
+  <path d="M660 510H700" stroke="#9BCBC1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M956 510H996" stroke="#D3B494" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1252 510H1292" stroke="#9BCBC1" stroke-width="10" stroke-linecap="round"/>
 
-  <rect x="108" y="684" width="1384" height="110" rx="28" fill="#1E1914" fill-opacity="0.96"/>
-  <text x="144" y="734" fill="#F9EFE3" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">The point of the prototype</text>
-  <text x="144" y="774" fill="#D8C7B5" font-family="Segoe UI, Arial, sans-serif" font-size="24">Most teams already have pieces of this stack. The gap is the orchestration layer that makes them behave like one coherent documentation product.</text>
+  <rect x="108" y="744" width="1384" height="136" rx="28" fill="#1E1914" fill-opacity="0.96"/>
+  <text x="144" y="798" fill="#F9EFE3" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">The point of the prototype</text>
+  <text x="144" y="838" fill="#D8C7B5" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    <tspan x="144" dy="0">Most teams already have pieces of this stack. The gap is the orchestration layer</tspan>
+    <tspan x="144" dy="30">that makes them behave like one coherent documentation product.</tspan>
+  </text>
 </svg>
