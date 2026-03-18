@@ -12,13 +12,17 @@ Copilot writes prose faster. GitBook gives you somewhere to publish. Vale catche
 DocForge is an interactive prototype of a Docs-as-Code platform: six modules that show what the full documentation pipeline looks like when you put it under one roof. No login. No signup. Click through the whole thing in under five minutes.
 This post is a build log. What I built, why I made the choices I made, and what I learned along the way.
 
+{{< figure src="/images/docforge-pipeline-overview.svg" alt="Flow chart showing the DocForge pipeline from source to structure to quality to build to publish" caption="DocForge is meant to make the documentation pipeline legible. The point is not just better writing tools. The point is a system where source, structure, quality, build, and publishing are connected." class="flow-figure reveal-on-scroll" >}}
+
+The diagram above is the shortest version of the pitch: documentation teams do not just need a place to write. They need a pipeline they can understand, audit, and improve.
+
 **What DocForge actually is**
 
 DocForge is a working interactive demo with six modules, each representing a stage of the documentation pipeline:
 
 **Module 1: Dashboard.** Pipeline health at a glance. Build history with commit hashes and pass/fail statuisn'tent metrics broken down by DITA topic type. Contributor activity. Open doc issues. This is the module I wished existed at every company I have worked at, a single view that tells you whether your docs pipeline is healthy or broken without opening five different tools.
 
-**Module 2: Editor.** A live Markdown editor with YAML frontmatter and real-time preview. The frontmatter is not decorative. It carries structured metadata: topic type, audience, version, sidebar position, tags. This is what lets the rest of the pipeline treat content as structured data instead of flat files.
+**Module 2: Editor.** A live Markdown editor with YAML frontmatter and real-time preview. The frontmatter isn't decorative. It carries structured metadata: topic type, audience, version, sidebar position, tags. This is what lets the rest of the pipeline treat content as structured data instead of flat files.
 
 **Module 3: Content Map.** A DITA-based topic taxonomy showing how every document is classified: Concept, Task, Reference, Tutorial, Troubleshoot. This is the module that probably needs the most explanation, so I will come back to it.
 
@@ -29,6 +33,8 @@ DocForge is a working interactive demo with six modules, each representing a sta
 **Module 6: Configuration.** A full docforge.config.yml with toggleable settings for build, lint, deploy, versioning, search, and analytics. Environment-aware. The kind of config file that every Docs-as-Code project eventually needs and nobody enjoys writing from scratch.
 
 The demo uses a fictional project called "ACME Platform Documentation" with 147 pages, 1,284 Git commits, and a 4.2-second build time. The numbers are illustrative, but the structure is drawn directly from real documentation systems I have managed.
+
+{{< figure src="/images/docforge-tooling-gap.svg" alt="Comparison diagram showing a fragmented documentation toolchain on one side and an integrated DocForge platform on the other" caption="The gap is not a missing single feature. It is the absence of an orchestration layer built specifically for documentation teams." class="flow-figure reveal-on-scroll" >}}
 
 
 **Why DITA topic typing in a Docs-as-Code prototype**

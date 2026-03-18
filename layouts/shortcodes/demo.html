@@ -16,17 +16,14 @@
     <iframe
       src="{{ $src }}"
       title="{{ $title }}"
-      loading="lazy"
+      loading="eager"
+      fetchpriority="high"
+      allow="autoplay; fullscreen"
       sandbox="allow-scripts allow-same-origin allow-popups"
       style="width:100%;height:{{ $height }}px;border:none;">
     </iframe>
-    <a class="demo-overlay-link" href="{{ $src }}" target="_blank" rel="noopener">
-      <span class="demo-eyebrow">Interactive product preview</span>
-      <span class="demo-play">▶</span>
-      <span class="demo-cta">{{ $title }}</span>
-      <span class="demo-subtitle">Play it inside this frame, then continue exploring without leaving the article.</span>
-    </a>
     <div class="demo-controls" aria-hidden="true">
+      <span class="demo-control-label demo-live-pill">Playing in-page</span>
       <span class="demo-progress"><span class="demo-progress-fill"></span></span>
       <span class="demo-control-label">00:00</span>
       <span class="demo-control-label">Live demo</span>
