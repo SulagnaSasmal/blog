@@ -1,0 +1,55 @@
+{{- define "main" }}
+<article class="about-layout">
+  <section class="about-hero reveal-on-scroll" data-reveal="up">
+    <div class="about-hero-copy">
+      <span class="hero-badge">About</span>
+      <h1 class="hero-title">{{ .Title }}</h1>
+      <p class="hero-text">I work at the intersection of documentation strategy, information architecture, and the tooling needed to turn docs into a reliable product surface.</p>
+    </div>
+    <aside class="about-summary-card interactive-card reveal-on-scroll" data-tilt data-reveal="left" data-reveal-delay="120">
+      <span class="card-kicker">Focus areas</span>
+      <div class="mini-metric-list stagger-children">
+        <div class="mini-metric stagger-item">
+          <strong>API documentation</strong>
+          <span>Developer-first reference and onboarding journeys</span>
+        </div>
+        <div class="mini-metric stagger-item">
+          <strong>Docs-as-code systems</strong>
+          <span>Structure, publishing workflows, and quality automation</span>
+        </div>
+        <div class="mini-metric stagger-item">
+          <strong>Content architecture</strong>
+          <span>Taxonomy, topic design, and scalable information models</span>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="about-content-grid reveal-on-scroll" data-reveal="up" data-reveal-delay="80">
+    <div class="about-main-card interactive-card" data-tilt>
+      <span class="card-kicker">Profile</span>
+      <div class="post-content">
+        {{- if not (.Param "disableAnchoredHeadings") }}
+        {{- partial "anchored_headings.html" .Content -}}
+        {{- else }}{{ .Content }}{{ end }}
+      </div>
+    </div>
+
+    <div class="about-side-column stagger-children">
+      <article class="side-note-card interactive-card stagger-item" data-tilt>
+        <span class="card-kicker">What I build</span>
+        <h3>Documentation experiences that feel intentional, structured, and measurable.</h3>
+        <p>I focus on the systems behind the words: contributor workflows, publishing pipelines, content models, and the interfaces that make them understandable.</p>
+      </article>
+      <article class="side-note-card interactive-card stagger-item" data-tilt>
+        <span class="card-kicker">Elsewhere</span>
+        <div class="contact-link-list">
+          <a href="https://sulagnasasmal.com" target="_blank" rel="noreferrer">Portfolio</a>
+          <a href="https://github.com/SulagnaSasmal" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/sulagnasasmal" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</article>
+{{- end }}

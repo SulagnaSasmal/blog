@@ -2,9 +2,10 @@
 title: "About"
 layout: "about"
 url: "/about/"
-summary: "about"
+summary: "Documentation engineer building structured, developer-first docs systems."
 ---
 
-I'm Sulagna Sasmal, a Senior Technical Writer specializing in API documentation, developer onboarding, and docs-as-code workflows.
+Sulagna Sasmal is a Senior Technical Writer specializing in API documentation, developer onboarding, and docs-as-code workflows.
 
-Find my portfolio at [sulagnasasmal.com](https://sulagnasasmal.com) and my work on [GitHub](https://github.com/SulagnaSasmal).
+Portfolio: [sulagnasasmal.com](https://sulagnasasmal.com)  
+GitHub: [github.com/SulagnaSasmal](https://github.com/SulagnaSasmal)
