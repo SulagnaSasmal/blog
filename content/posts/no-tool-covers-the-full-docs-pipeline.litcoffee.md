@@ -23,7 +23,7 @@ DocForge is a working interactive demo with six modules, each representing a sta
 
 **Module 2: Editor.** The YAML frontmatter isn't decorative. It carries structured metadata: topic type, audience, version, sidebar position, tags. This is what lets the rest of the pipeline treat content as structured data instead of flat files.
 
-**Module 3: Content Map.** A DITA-based topic taxonomy showing how every document is classified: Concept, Task, Reference, Tutorial, Troubleshoot. This is the module that probably needs the most explanation, so I will come back to it.
+**Module 3: Content Map.** A DITA-based topic taxonomy showing how every document is classified: Concept, Task, Reference, Tutorial, Troubleshoot.
 
 **Module 4: Style Linter.** Automated quality checks running Vale rules against Microsoft Writing Style Guide standards. The demo shows a score of 94 with seven findings across four files, including a passive voice flag, a task-first structure violation, a readability warning, and a terminology inconsistency. These are not generic linting categories. They are the exact kinds of issues I have spent years fixing in real documentation reviews.
 
@@ -32,8 +32,6 @@ DocForge is a working interactive demo with six modules, each representing a sta
 **Module 6: Configuration.** A full docforge.config.yml with toggleable settings for build, lint, deploy, versioning, search, and analytics. Environment-aware. The kind of config file that every Docs-as-Code project eventually needs and nobody enjoys writing from scratch.
 
 The demo uses a fictional project called "ACME Platform Documentation" with 147 pages, 1,284 Git commits, and a 4.2-second build time. The numbers are illustrative, but the structure is drawn directly from real documentation systems I have managed.
-
-{{< figure src="/images/docforge-tooling-gap.svg" alt="Comparison diagram showing a fragmented documentation toolchain on one side and an integrated DocForge platform on the other" caption="The gap is not a missing single feature. It is the absence of an orchestration layer built specifically for documentation teams." class="flow-figure reveal-on-scroll" >}}
 
 
 ## Why DITA topic typing in a Docs-as-Code prototype
@@ -46,12 +44,32 @@ DITA's five core topic types, Concept, Task, Reference, Tutorial, and Troublesho
 
 The problem I have seen repeatedly in enterprise documentation is not that writers lack tools. It is that they lack structure. A "guide" might start as a concept overview, drift into procedural steps, detour through API parameters, and end with troubleshooting. That is not a guide. That is four topics welded together. DITA topic typing gives you a vocabulary to prevent that drift.
 
+| Topic Type    | Purpose                              | What it prevents                          |
+|---------------|--------------------------------------|-------------------------------------------|
+| Concept       | Explains what something is           | Background buried inside task topics      |
+| Task          | Tells you how to do something        | Steps mixed with reference data           |
+| Reference     | Provides lookup information          | Narrative prose in parameter tables       |
+| Tutorial      | Guides you through a complete workflow | Fragmented how-to steps with no context |
+| Troubleshoot  | Diagnoses and resolves a problem     | Debugging steps scattered across guides   |
+
 DocForge borrows the taxonomy without importing the overhead. Content is still Markdown. The topic type lives in YAML frontmatter. The Content Map module visualizes the taxonomy. The Style Linter includes a custom TaskFirst rule that flags task topics that open with background context instead of the user's goal.
 This is the kind of structural enforcement that no off-the-shelf tool gives you. Confluence does not care whether your page is a concept or a task. GitBook does not validate topic structure. And AI writing assistants have no concept of information architecture at all.
 
 ## What the linter actually catches
 
-The Style Linter module is the one I am most particular about because I have spent years doing exactly this work manually. Let me walk through the seven findings in the demo because they illustrate the kinds of quality problems that slip through in real documentation all the time.
+The Style Linter module is the one I am most particular about because I have spent years doing exactly this work manually.
+
+| Rule                           | Category       | Severity | Example issue                              |
+|-------------------------------|----------------|----------|--------------------------------------------|
+| Microsoft.Passive             | Style          | Warning  | Passive voice obscures actor in procedures |
+| DocForge.TaskFirst            | Structure      | Error    | Task topic opens with background, not goal |
+| Vale.Readability              | Readability    | Warning  | Grade 14.2 against target of grade 10      |
+| Microsoft.Wordiness           | Style          | Info     | "In order to" used instead of "To"         |
+| DocForge.Terminology          | Consistency    | Error    | "API key" capitalized three different ways |
+| DocForge.ProgressiveDisclosure| Architecture  | Warning  | Reference page exceeds 2,500 words         |
+| DocForge.CodeSamples          | Completeness   | Error    | Four endpoints missing Go and Ruby samples |
+
+Let me walk through the seven findings in the demo because they illustrate the kinds of quality problems that slip through in real documentation all the time.
 
 **Passive voice (Microsoft.Passive):** "The payment was declined by the issuing bank." The fix is "The issuing bank declined the payment." This is a standard Vale rule from the Microsoft Style Guide package. Passive voice is not always wrong, but in procedural documentation it obscures who is doing what, and that matters when a developer is debugging a failed API call at 2 AM.
 
@@ -72,7 +90,7 @@ These are not theoretical lint rules. Every single one of them comes from a real
 
 ## The gap this prototype is pointing at
 
-I have spent close to twenty years writing documentation for enterprise platforms: FinTech, financial crime compliance, payments, investment banking, enterprise communications. I have used MadCap Flare, DITA/XML authoring tools, Confluence, GitHub wikis, Docs-as-Code with Markdown and static site generators, and more recently, AI-assisted writing tools.
+I have spent twenty years writing documentation for enterprise platforms: FinTech, financial crime compliance, payments, investment banking, enterprise communications. I have used MadCap Flare, DITA/XML authoring tools, Confluence, GitHub wikis, Docs-as-Code with Markdown and static site generators, and more recently, AI-assisted writing tools.
 
 Here is the pattern I keep seeing. Every documentation team I have worked with eventually needs the same set of capabilities: version control, structured content classification, automated style enforcement, multi-format publishing, pipeline monitoring, and a configuration layer that ties it all together. And every team assembles this from a different patchwork of tools, glued together with custom scripts and tribal knowledge.
 
@@ -82,6 +100,8 @@ Copilot and other AI writing tools are solving a different problem entirely. The
 
 GitBook, Confluence, Mintlify, and ReadMe are publishing platforms. They give you somewhere to put your docs. They don't engineer the pipeline that produces them. There is a real difference between a writer who uses a docs tool and an engineer who builds the infrastructure behind it.
 That is the gap DocForge is pointing at. Not a missing feature in an existing tool. A missing category of tool altogether.
+
+{{< figure src="/images/docforge-tooling-gap.svg" alt="Comparison diagram showing a fragmented documentation toolchain on one side and an integrated DocForge platform on the other" caption="The gap is not a missing single feature. It is the absence of an orchestration layer built specifically for documentation teams." class="flow-figure reveal-on-scroll" >}}
 
 ## What this prototype is and is not
 
@@ -101,9 +121,9 @@ Not your writing workflow. Your pipeline. The system that takes your source cont
 
 I am asking because I want to know whether the gap I see from twenty years of enterprise documentation is the same gap other people are struggling with, or whether every team's pain is different enough that an integrated tool would miss the mark.
 
-If you have five minutes and want to see what I built, the demo is below. No login. No signup. Just click through. You can also go straight to the [DocForge platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/index.html).
+If you have five minutes and want to see what I built, the demo is below. No login. No signup. Start with the Dashboard module — it shows immediately what I mean about pipeline visibility. You can also go straight to the [DocForge platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/index.html).
 
 {{< demo src="https://sulagnasasmal.github.io/Documentation-Center-Platform/demo.html" title="DocForge—Live Demo" height="720" >}}
 -----------------------------------------------------------------------------
-*Sulagna Sasmal is a Documentation Engineer, Information Architect, and AI Tools Builder with nearly twenty years of experience in enterprise software documentation. She writes about documentation engineering, Docs-as-Code, and the tools that documentation teams actually need.
+*Sulagna Sasmal is a Documentation Engineer, Information Architect, and AI Tools Builder with twenty years of experience in enterprise software documentation. She writes about documentation engineering, Docs-as-Code, and the tools that documentation teams actually need.
 Portfolio: sulagnasasmal.com · LinkedIn: linkedin.com/in/sulagnasasmal · GitHub: github.com/SulagnaSasmal*
