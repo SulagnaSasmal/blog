@@ -1,6 +1,6 @@
 ---
 title: "No Tool Covers the Full Docs Pipeline. So I Built One."
-date: 2026-03-18
+date: 2026-03-18T00:01:00+05:30
 slug: "no-tool-covers-the-full-docs-pipeline"
 draft: false
 tags: ["docs", "strategy"]

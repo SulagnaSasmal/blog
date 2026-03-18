@@ -1,5 +1,6 @@
 baseURL = "https://sulagnasasmal.github.io/blog/"
 languageCode = "en-us"
+timeZone = "Asia/Kolkata"
 title = "Sulagna Sasmal"
 theme = "PaperMod"
 
