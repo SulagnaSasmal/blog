@@ -1114,7 +1114,6 @@ body.dark .post-content figure.flow-figure figcaption {
 }
 
 .like-btn.liked .like-heart {
-  content: "♥";
   transform: scale(1.2);
 }
 

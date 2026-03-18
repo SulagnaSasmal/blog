@@ -102,7 +102,7 @@ Not your writing workflow. Your pipeline. The system that takes your source cont
 
 I am asking because I want to know whether the gap I see from twenty years of enterprise documentation is the same gap other people are struggling with, or whether every team's pain is different enough that an integrated tool would miss the mark.
 
-If you have five minutes and want to see what I built, the demo is below. No login. No signup. Just click through.
+If you have five minutes and want to see what I built, the demo is below. No login. No signup. Just click through. You can also go straight to the [DocForge platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/index.html).
 
 {{< demo src="https://sulagnasasmal.github.io/Documentation-Center-Platform/demo.html" title="DocForge—Live Demo" height="720" >}}
 -----------------------------------------------------------------------------
