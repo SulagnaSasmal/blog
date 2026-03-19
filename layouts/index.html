@@ -21,9 +21,9 @@
     <div class="post-lead-header">
       <time class="post-lead-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
       <div class="post-lead-tags">
-        {{- range first 3 .Params.tags }}
+        {{- with .Params.tags }}{{- range first 3 . }}
         <span class="post-tag">{{ . }}</span>
-        {{- end }}
+        {{- end }}{{- end }}
       </div>
     </div>
     <h2 class="post-lead-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -42,9 +42,9 @@
         <h3 class="post-row-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <p class="post-row-desc">{{ .Description | default (.Summary | plainify | truncate 160) }}</p>
         <div class="post-row-tags">
-          {{- range first 2 .Params.tags }}
+          {{- with .Params.tags }}{{- range first 2 . }}
           <span class="post-tag">{{ . }}</span>
-          {{- end }}
+          {{- end }}{{- end }}
         </div>
       </div>
     </article>

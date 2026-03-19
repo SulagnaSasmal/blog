@@ -32,6 +32,7 @@ body.dark {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -986,6 +987,46 @@ body.dark .post-content figure.flow-figure figcaption {
   }
 }
 
+@media (max-width: 768px) {
+  body::before {
+    left: -12rem;
+    width: 16rem;
+    height: 16rem;
+    opacity: 0.5;
+  }
+
+  body::after {
+    right: -12rem;
+    width: 16rem;
+    height: 16rem;
+    opacity: 0.5;
+  }
+
+  .nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #menu a {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.88rem;
+  }
+
+  .page-header {
+    padding: 1.4rem 1rem;
+  }
+
+  .post-single {
+    padding: 1.4rem 1rem;
+    border-radius: 22px;
+  }
+
+  .first-entry {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   .blog-home,
   .about-layout {
@@ -1019,13 +1060,26 @@ body.dark .post-content figure.flow-figure figcaption {
 
   body::before,
   body::after {
-    width: 14rem;
-    height: 14rem;
+    width: 10rem;
+    height: 10rem;
+    opacity: 0.35;
+  }
+
+  body::before {
+    left: -6rem;
+  }
+
+  body::after {
+    right: -6rem;
   }
 
   .post-title,
   .page-header h1 {
-    font-size: clamp(2rem, 10vw, 2.7rem);
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+  }
+
+  .first-entry .entry-header h1 {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
   }
 
   .first-entry,
@@ -1050,6 +1104,11 @@ body.dark .post-content figure.flow-figure figcaption {
   .post-content figure.flow-figure {
     padding: 0.75rem;
     border-radius: 22px;
+  }
+
+  .post-single {
+    padding: 1.2rem 0.8rem;
+    border-radius: 18px;
   }
 }
 
