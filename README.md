@@ -1,4 +1,4 @@
-# Blog — sulagnasasmal.github.io/blog
+# Blog
 
 Hugo blog deployed to GitHub Pages via GitHub Actions.
 
@@ -8,7 +8,7 @@ Hugo blog deployed to GitHub Pages via GitHub Actions.
 ## Local development
 
 ```bash
-# First time — install Hugo Extended
+# First time: install Hugo Extended
 # https://gohugo.io/installation/
 
 hugo server -D        # serve with drafts
