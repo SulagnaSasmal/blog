@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Rebuild daily at 8:00 AM IST (02:30 UTC) to auto-publish scheduled posts
+    - cron: '30 2 * * *'
 
 permissions:
   contents: read

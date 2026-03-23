@@ -1,4 +1,14 @@
-# Documentation Is an Interface. We Keep Building It Like a Library.
+---
+
+title: "Documentation Is an Interface. We Keep Building It Like a Library."  
+date: 2026-03-23  
+slug: "documentation-is-an-interface-we-keep-building-it-like-a-library"  
+draft: false  
+tags: ["docs", "strategy", "AI", "UX", "technical-writing"]
+description: "How documentation becomes an interface when AI pulls it into the product, what technical writers and UX designers are each missing, and what a converged model looks like."
+discussionPrompt: "Where does your content break when it crosses from docs to product? Not theoretical — a specific moment, a specific failure."
+
+---
 
 Technical writers build content. UX designers build interfaces. For twenty years, these two disciplines have operated in separate buildings, separate tools, separate reporting lines.
 
@@ -14,7 +24,7 @@ This post is about what happens when documentation becomes an interface, what te
 
 Here is how documentation reaches users today in most organizations.
 
-[DIAGRAM 1: The siloed pipeline — tech writer and UX writer operating in parallel, separated by a silo boundary, with an AI layer collapsing both into a single user-facing surface]
+{{< figure src="/images/docs_ux_convergence_diagram.svg" alt="Diagram showing two parallel pipelines labeled tech writer and UX writer, separated by a vertical silo boundary, with an AI layer at the bottom connecting both to a single user-facing surface" caption="The siloed pipeline, tech writer and UX writer operating in parallel, separated by a silo boundary, with an AI layer collapsing both into a single user-facing surface" class="flow-figure reveal-on-scroll" >}}
 
 The technical writer produces Markdown source, applies a content taxonomy (DITA topic types, metadata, frontmatter), and publishes to a docs portal as HTML, PDF, or API reference. The UX designer produces Figma mockups, writes microcopy, and ships tooltips, error messages, and onboarding flows inside the product UI.
 
@@ -58,7 +68,7 @@ AI is not just another delivery channel. It fundamentally restructures who consu
 
 ## What the converged model looks like
 
-[DIAGRAM 2: The converged pipeline — one structured content source flowing through a quality gate into five delivery surfaces (docs portal, in-app help, AI chatbot, API reference, agent), owned by a documentation engineer]
+{{< figure src="/images/converged_docs_ux_pipeline.svg" alt="The converged pipeline—one structured content source flowing through a quality gate into five delivery surfaces (docs portal, in-app help, AI chatbot(s), API reference, personal digital assistant), owned by a documentation engineer" caption="Diagram of the converged documentation–UX pipeline: a single structured content source passes through a quality gate and is delivered consistently across multiple surfaces, all owned and governed by a documentation engineer." class="flow-figure reveal-on-scroll" >}}
 
 One structured content source. Markdown with DITA taxonomy and rich metadata. A quality gate that enforces both documentation standards (terminology, completeness, structure) and UX principles (task-first ordering, readability, progressive disclosure). Five delivery surfaces: docs portal, in-app help, AI chatbot, API reference, and agent consumption. One owner: a documentation engineer who understands content structure, quality enforcement, and delivery pipeline design.
 
@@ -106,6 +116,6 @@ That is the gap I am trying to close. Tell me where it hurts.
 
 ---
 
-*Sulagna Sasmal is a Documentation Engineer, Information Architect, and AI Tools Builder. She writes about the systems behind documentation, not just the words inside it.*
+_Sulagna Sasmal is a Documentation Engineer, Information Architect, and AI Tools Builder. She writes about the systems behind documentation, not just the words inside it._
 
-*Portfolio: [sulagnasasmal.com](https://sulagnasasmal.com) · Blog: [sulagnasasmal.github.io/blog](https://sulagnasasmal.github.io/blog/) · GitHub: [github.com/SulagnaSasmal](https://github.com/SulagnaSasmal)*
+_Portfolio:_ [_sulagnasasmal.com_](https://sulagnasasmal.com) _· Blog:_ [_sulagnasasmal.github.io/blog_](https://sulagnasasmal.github.io/blog/) _· GitHub:_ [_github.com/SulagnaSasmal_](https://github.com/SulagnaSasmal)

@@ -100,34 +100,58 @@ document.addEventListener("click", function (event) {
   link.closest(".demo-body").classList.add("active");
 });
 
-function setupLikeButton() {
-  var btn = document.querySelector(".like-btn");
-  if (!btn) {
+function setupReactionChips() {
+  var container = document.querySelector(".reaction-chips");
+  if (!container) {
     return;
   }
 
-  var url = btn.dataset.url;
-  var storageKey = "liked:" + url;
-  var heart = btn.querySelector(".like-heart");
+  var url = container.dataset.url;
+  var chips = container.querySelectorAll(".chip");
 
-  if (localStorage.getItem(storageKey)) {
-    btn.classList.add("liked");
-    if (heart) {
-      heart.innerHTML = "&#9829;";
+  chips.forEach(function (chip) {
+    var key = "reaction:" + chip.dataset.reaction + ":" + url;
+    var active = localStorage.getItem(key) === "1";
+
+    if (active) {
+      chip.classList.add("active");
+      chip.setAttribute("aria-pressed", "true");
     }
+
+    chip.addEventListener("click", function () {
+      var isActive = chip.classList.toggle("active");
+      chip.setAttribute("aria-pressed", String(isActive));
+      if (isActive) {
+        localStorage.setItem(key, "1");
+      } else {
+        localStorage.removeItem(key);
+      }
+    });
+  });
+}
+
+function setupGiscusThemeSync() {
+  function sendTheme(theme) {
+    var iframe = document.querySelector(".giscus-frame");
+    if (!iframe) {
+      return;
+    }
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme } } },
+      "https://giscus.app"
+    );
   }
 
-  btn.addEventListener("click", function () {
-    var isLiked = btn.classList.toggle("liked");
-    if (heart) {
-      heart.innerHTML = isLiked ? "&#9829;" : "&#9825;";
-    }
-    if (isLiked) {
-      localStorage.setItem(storageKey, "1");
-    } else {
-      localStorage.removeItem(storageKey);
-    }
+  var observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.attributeName === "class") {
+        var isDark = document.body.classList.contains("dark");
+        sendTheme(isDark ? "dark" : "light");
+      }
+    });
   });
+
+  observer.observe(document.body, { attributes: true });
 }
 
 function setupCopyLink() {
@@ -172,6 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateScrollProgress();
   revealOnScroll();
   setupInteractiveCards();
-  setupLikeButton();
+  setupReactionChips();
+  setupGiscusThemeSync();
   setupCopyLink();
 });

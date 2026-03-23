@@ -1,10 +1,15 @@
 <div class="post-interactions">
 
+  {{- $prompt := .Params.discussionPrompt | default "" }}
+
   <div class="interaction-row">
-    <button class="like-btn" data-url="{{ .RelPermalink }}" aria-label="Mark as useful">
-      <span class="like-heart" aria-hidden="true">&#9825;</span>
-      <span class="like-text">Found this useful</span>
-    </button>
+    <div class="reaction-chips" data-url="{{ .RelPermalink }}" aria-label="React to this post">
+      <span class="reaction-label">React</span>
+      <button class="chip" data-reaction="sparked" aria-pressed="false">💡 Sparked an idea</button>
+      <button class="chip" data-reaction="relevant" aria-pressed="false">🔥 Relevant to me</button>
+      <button class="chip" data-reaction="argued" aria-pressed="false">👏 Well argued</button>
+      <button class="chip" data-reaction="pushback" aria-pressed="false">🤔 I'd push back</button>
+    </div>
 
     <div class="share-group">
       <span class="share-label">Share</span>
@@ -20,7 +25,11 @@
 
   <div class="comments-section">
     <h3 class="comments-heading">Discussion</h3>
+    {{- if $prompt }}
+    <p class="discussion-prompt">{{ $prompt }}</p>
+    {{- else }}
     <p class="comments-sub">Have a question or a different take? Drop a comment below. GitHub account required.</p>
+    {{- end }}
     <script src="https://giscus.app/client.js"
       data-repo="SulagnaSasmal/blog"
       data-repo-id="R_kgDORpyPjA"
