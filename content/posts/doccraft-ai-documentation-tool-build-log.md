@@ -82,7 +82,7 @@ The feedback widget is in the tool. Use it. The gap analysis is only as good as 
 
 If you want to follow the build as it develops, I write about documentation systems, not just documentation, at [sulagnasasmal.github.io/blog](https://sulagnasasmal.github.io/blog/). The next post covers what the feedback data from the first month of real users actually showed, and what I am building because of it.
 
-{{< demo src="https://doccraft-ten.vercel.app" title="DocCraft AI — Try it live" height="700" >}}
+{{< demo src="https://doccraft-ten.vercel.app" title="DocCraft AI — Try the product" height="700" >}}
 
 ---
 
