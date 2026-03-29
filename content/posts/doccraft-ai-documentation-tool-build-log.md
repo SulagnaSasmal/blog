@@ -18,6 +18,8 @@ The tools were not making writing mistakes. They were making judgment mistakes. 
 
 That is the gap DocCraft is built to close.
 
+{{< demo src="https://doccraft-ten.vercel.app/demo" title="DocCraft AI — Product Demo" height="700" >}}
+
 ## Where this started
 
 I have spent years writing and reviewing enterprise documentation. Release notes for payment APIs. Admin guides for compliance platforms. Onboarding flows for developer portals. In that time I have developed a set of instincts that kick in before I write anything.
@@ -123,6 +125,8 @@ The compliance check needs to be customizable beyond MSTP. Different organizatio
 Multi-format input is not a nice-to-have for enterprise users. It is the baseline. Source material arrives in every format except the one your tool expects.
 
 The feedback pipeline I shipped this week will generate data that tells me which of these three things matters most to the people actually using the tool. That is how this gets productized: not by guessing at a feature set, but by watching where the frustrated emoji lands.
+
+{{< demo src="https://doccraft-ten.vercel.app" title="DocCraft AI — Try it live" height="700" >}}
 
 ## One question
 
