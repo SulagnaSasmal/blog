@@ -16,6 +16,8 @@ Not grammatical mistakes. Judgment mistakes. Writing a Getting Started guide whe
 
 The tools skipped the step that a senior writer never skips: figuring out what you actually need before you start writing. That is the gap DocCraft is built to close.
 
+DocCraft AI is an intelligent documentation generator built around a single question that most AI writing tools never ask: what is missing from your source material before you write a single word? Every other tool generates immediately. DocCraft analyses first.
+
 {{< demo src="https://doccraft-ten.vercel.app/demo" title="DocCraft AI — Product Demo" height="700" >}}
 
 ## Where this started
@@ -32,9 +34,9 @@ The second iteration started with one question: what does a senior technical wri
 
 ## What gap analysis actually means
 
-The feature I am most proud of is also the one users initially find most annoying.
+The most common failure in AI documentation is confident output from incomplete input.
 
-When you upload source material, DocCraft does not generate immediately. It reads first. It identifies what is missing: not what is poorly written, but what is absent.
+The feature I am most proud of is also the one users initially find most annoying. When you upload source material, DocCraft does not generate immediately. It reads first. It identifies what is missing: not what is poorly written, but what is absent.
 
 Gaps surface in three categories. Missing information: facts required to complete the documentation that are not present in the source. Ambiguities: statements that could mean two different things and need clarification before a writer can resolve them. Assumptions: things the source takes for granted that the target audience probably does not know.
 
@@ -42,9 +44,7 @@ Then it asks questions. Not generic questions about audience. Specific, content-
 
 You can answer the questions, skip them, or tell DocCraft what you know and let it infer the rest.
 
-This is the step that changes output quality. Not the model. Not the prompt engineering. The 90 seconds of structured input gathering before anything gets written.
-
-Every experienced technical writer I have shown this to has said some version of the same thing: "That's what I do in my head." The gap analysis externalizes the invisible preparatory work and makes it interactive. That is a different kind of tool.
+Ninety seconds of structured input gathering before generation changes what comes out more than any model upgrade or prompt refinement can. Every experienced technical writer I have shown this to has said some version of the same thing: "That's what I do in my head." The gap analysis externalizes the invisible preparatory work and makes it interactive. That is a different kind of tool.
 
 ## The compliance check that runs whether you want it to or not
 
@@ -54,15 +54,15 @@ DocCraft includes a Microsoft Style Guide compliance checker. It flags passive v
 
 In the first version, this was a button. Almost nobody pressed it.
 
-Now it runs automatically the moment the document is generated. It surfaces before you reach the editor. Every issue is categorized by severity: errors in red, warnings in amber, suggestions in blue. Each has a one-click fix.
+Now it runs automatically the moment the document is generated, before you read the draft. Every issue is categorized by severity: errors in red, warnings in amber, suggestions in blue. Each has a one-click fix.
 
-The reason this matters is behavioral, not technical. The moment a writer has read through a generated document and decided it is good enough to edit, they have already normalized the problems in it. A compliance flag three minutes later gets dismissed. A compliance flag alongside the first draft gets acted on.
+It runs automatically because compliance flags are only useful before you have read the draft and normalized the problems. A flag alongside the first draft gets acted on. A flag three minutes later gets dismissed.
 
 The tool has a point of view about when quality checking should happen, and it enforces that point of view.
 
 ## The messy input problem
 
-Real documentation work does not start with clean Markdown files.
+Documentation work does not start with clean files.
 
 It starts with a 47-slide PowerPoint deck, a Word document with tracked changes, a PDF exported from Confluence that renders half the text as garbage, a screenshot of a whiteboard, and a Slack thread someone copy-pasted into a notes file.
 
@@ -72,7 +72,7 @@ PDF files go through `pdf-parse`, backed by Mozilla's PDF.js engine. This matter
 
 Image files go through GPT-4o-mini Vision, which extracts text exactly as it appears, preserving structure, headings, and tables. DOCX files go through Mammoth, which handles tracked changes and preserves heading structure. When a Word document has tracked changes, DocCraft surfaces that fact immediately so the writer knows what they are working with.
 
-Extracted content appears the moment the file is processed, not behind a toggle. If the extraction is wrong, you know before you have invested time in the workflow.
+Extracted content appears the moment the file is processed, not behind a toggle. DocCraft reads what you actually have. If the extraction is wrong, you know before you have invested time in the workflow.
 
 ## What the tool stack actually looks like
 
@@ -108,7 +108,7 @@ The feedback widget I shipped is the same idea applied to the product itself. Yo
 
 ## Where this goes from here
 
-The gap analysis is the differentiator. No other tool I have tested asks what is missing before generating. That step changes output quality in a way that a better model or more sophisticated prompt engineering does not.
+The gap analysis is the differentiator. That question — what is missing before you write — changes what gets generated in a way that model scaling and prompt engineering cannot replicate.
 
 The compliance check needs to go beyond MSTP. Different organizations have different style guides, and the current custom rule layer handles some of this. It needs more.
 
@@ -124,7 +124,7 @@ When was the last time an AI tool generated documentation that passed your revie
 
 Not "good enough to clean up." Not "it gave me a starting point." Actually passed. You read it, approved it, published it without rewriting the structure or correcting the assumptions.
 
-If your answer is never, I want to know what it got wrong. That is the gap DocCraft is designed to close, and I am still learning exactly where it is.
+Open DocCraft, upload your next real piece of source material, and run the gap analysis. See what it finds before it writes a word. Then tell me what it missed.
 
 ---
 
