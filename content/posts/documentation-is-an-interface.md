@@ -4,7 +4,7 @@ title: "Documentation Is an Interface. We Keep Building It Like a Library."
 date: 2026-03-23  
 slug: "documentation-is-an-interface-we-keep-building-it-like-a-library"  
 draft: false  
-tags: \["docs", "strategy", "AI", "UX", "technical-writing"\]  
+tags: ["docs", "strategy", "AI", "UX", "technical-writing"]
 description: "How documentation becomes an interface when AI pulls it into the product, what technical writers and UX designers are each missing, and what a converged model looks like."  
 discussionPrompt: "Where does your content break when it crosses from docs to product? Not theoretical. A specific moment, a specific failure."
 
