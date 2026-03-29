@@ -1,6 +1,7 @@
 {{- $src := .Get "src" -}}
 {{- $title := .Get "title" | default "Live Demo" -}}
 {{- $height := .Get "height" | default "720" -}}
+{{- $badge := .Get "badge" | default "Interactive demo" -}}
 <div class="demo-window">
   <div class="demo-titlebar">
     <span class="demo-dots">
@@ -8,7 +9,7 @@
       <span class="dot yellow"></span>
       <span class="dot green"></span>
     </span>
-    <span class="demo-badge">Interactive product</span>
+    <span class="demo-badge">{{ $badge }}</span>
     <span class="demo-title">{{ $title }}</span>
     <a class="demo-open" href="{{ $src }}" target="_blank" rel="noopener" title="Open in new tab">Open ↗</a>
   </div>
