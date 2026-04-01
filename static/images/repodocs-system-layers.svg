@@ -1,0 +1,28 @@
+<svg width="100%" viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .layer-title { font-weight: 500; font-size: 14px; font-family: sans-serif; }
+    .layer-sub { font-size: 12px; font-family: sans-serif; }
+    .teal-fill { fill: #E1F5EE; stroke: #0F6E56; }
+    .teal-text { fill: #085041; }
+    .purple-fill { fill: #EEEDFE; stroke: #534AB7; }
+    .purple-text { fill: #3C3489; }
+    .amber-fill { fill: #FAEEDA; stroke: #854F0B; }
+    .amber-text { fill: #633806; }
+    .blue-fill { fill: #E6F1FB; stroke: #185FA5; }
+    .blue-text { fill: #0C447C; }
+    .footer { fill: #5F5E5A; font-size: 12px; font-family: sans-serif; }
+  </style>
+  <rect x="40" y="30" width="600" height="52" rx="10" stroke-width="0.5" class="teal-fill"/>
+  <text x="340" y="52" text-anchor="middle" class="layer-title teal-text">Templates</text>
+  <text x="340" y="70" text-anchor="middle" class="layer-sub teal-text">API, feature, product, governance, ops, architecture</text>
+  <rect x="40" y="102" width="600" height="52" rx="10" stroke-width="0.5" class="purple-fill"/>
+  <text x="340" y="124" text-anchor="middle" class="layer-title purple-text">Prompt packs</text>
+  <text x="340" y="142" text-anchor="middle" class="layer-sub purple-text">Drafting and review prompts, workflow-specific</text>
+  <rect x="40" y="174" width="600" height="52" rx="10" stroke-width="0.5" class="amber-fill"/>
+  <text x="340" y="196" text-anchor="middle" class="layer-title amber-text">Validation</text>
+  <text x="340" y="214" text-anchor="middle" class="layer-sub amber-text">Frontmatter, structure, OpenAPI-aware checks</text>
+  <rect x="40" y="246" width="600" height="52" rx="10" stroke-width="0.5" class="blue-fill"/>
+  <text x="340" y="268" text-anchor="middle" class="layer-title blue-text">Published example</text>
+  <text x="340" y="286" text-anchor="middle" class="layer-sub blue-text">Payments API reference — inspect before you commit</text>
+  <text x="340" y="330" text-anchor="middle" class="footer">One installable repository. No stitching required.</text>
+</svg>
