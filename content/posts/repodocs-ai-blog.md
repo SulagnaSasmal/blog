@@ -16,7 +16,7 @@ I have spent twenty years watching this happen across financial platforms, compl
 
 RepoDocs AI is my attempt to build that system.
 
-![Three API services documented in three different formats, with no sync between them](images/repodocs-hero.svg)
+![Three API services documented in three different formats, with no sync between them](/images/repodocs-hero.svg)
 
 ---
 
@@ -46,11 +46,11 @@ Normal documentation template packs stop at static files. You clone the repo, co
 
 RepoDocs AI adds the workflow layer. Reusable templates across product, feature, API, governance, operations, and architecture documentation. Prompt packs for drafting and review that are workflow-specific rather than generic. Validation that checks frontmatter, structure, and OpenAPI alignment before content reaches review. A payments API example you can inspect as a published site rather than guess at from a README promise. And export pipelines for teams that need publishing support beyond the static site.
 
-![RepoDocs AI system layers: templates, prompt packs, validation, published example](images/repodocs-system-layers.svg)
+![RepoDocs AI system layers: templates, prompt packs, validation, published example](/images/repodocs-system-layers.svg)
 
 The Developer Experience Scorecard is also part of the system. It is a structured usability test: give a tester only the repository link and README, then score clarity, ease of use, documentation quality, and AI usefulness. The pass threshold is 7 out of 10. I ran my own self-assessment in March 2026 and scored 7.75. The scorecard is public and open for community assessments.
 
-![RepoDocs AI DX Scorecard — March 2026 self-assessment results](images/repodocs-scorecard.svg)
+![RepoDocs AI DX Scorecard — March 2026 self-assessment results](/images/repodocs-scorecard.svg)
 
 ---
 
