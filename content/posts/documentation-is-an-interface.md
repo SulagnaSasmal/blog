@@ -24,7 +24,7 @@ This post is about what happens when documentation becomes an interface, what te
 
 Here is how documentation reaches users today in most organizations.
 
-{{\< figure src="/images/docs\_ux\_convergence\_diagram.svg" alt="Diagram showing two parallel pipelines labeled tech writer and UX writer, separated by a vertical silo boundary, with an AI layer at the bottom connecting both to a single user-facing surface" caption="The siloed pipeline, tech writer and UX writer operating in parallel, separated by a silo boundary, with an AI layer collapsing both into a single user-facing surface" class="flow-figure reveal-on-scroll" >}}
+{{< figure src="/images/docs_ux_convergence_diagram.svg" alt="Diagram showing two parallel pipelines labeled tech writer and UX writer, separated by a vertical silo boundary, with an AI layer at the bottom connecting both to a single user-facing surface" caption="The siloed pipeline, tech writer and UX writer operating in parallel, separated by a silo boundary, with an AI layer collapsing both into a single user-facing surface" class="flow-figure reveal-on-scroll" >}}
 
 The technical writer produces Markdown source, applies a content taxonomy (DITA topic types, metadata, frontmatter), and publishes to a docs portal as HTML, PDF, or API reference. The UX designer produces Figma mockups, writes microcopy, and ships tooltips, error messages, and onboarding flows inside the product UI.
 
@@ -68,7 +68,7 @@ AI is not just another delivery channel. It fundamentally restructures who consu
 
 ## What the converged model looks like
 
-{{\< figure src="/images/converged\_docs\_ux\_pipeline.svg" alt="The converged pipeline—one structured content source flowing through a quality gate into five delivery surfaces (docs portal, in-app help, AI chatbot(s), API reference, personal digital assistant), owned by a documentation engineer" caption="Diagram of the converged documentation–UX pipeline: a single structured content source passes through a quality gate and is delivered consistently across multiple surfaces, all owned and governed by a documentation engineer." class="flow-figure reveal-on-scroll" >}}
+{{< figure src="/images/converged_docs_ux_pipeline.svg" alt="The converged pipeline: one structured content source flowing through a quality gate into five delivery surfaces (docs portal, in-app help, AI chatbot, API reference, personal digital assistant), owned by a documentation engineer" caption="Diagram of the converged documentation and UX pipeline: a single structured content source passes through a quality gate and is delivered consistently across multiple surfaces, all owned and governed by a documentation engineer." class="flow-figure reveal-on-scroll" >}}
 
 One structured content source. Markdown with DITA taxonomy and rich metadata. A quality gate that enforces both documentation standards (terminology, completeness, structure) and UX principles (task-first ordering, readability, progressive disclosure). Five delivery surfaces: docs portal, in-app help, AI chatbot, API reference, and AI assistant queries. One owner: a documentation engineer who understands content structure, quality enforcement, and delivery pipeline design.
 
