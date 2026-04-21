@@ -80,29 +80,7 @@ This is not achievable through willpower or review cycles. It needs to be a stru
 
 ## The Monday-morning diagnostic
 
-Reading about this does nothing. Here is what to actually do.
-
-Pick one concept in your product that appears on at least three surfaces. A destructive action is a good choice because the stakes make the disclosure problem visible.
-
-Open four browser tabs.
-
-Tab one: the docs page for that concept. Write down the core sentence that defines what happens.
-
-Tab two: the product UI where the action lives. Screenshot the tooltip, the confirmation dialog, any inline help.
-
-Tab three: the onboarding tour or getting-started flow. Find where this capability is first introduced. Write down the sentence.
-
-Tab four: your chatbot or AI assistant. Ask it a plausible user question about the action. Write down the answer.
-
-Now put the four sentences in a row and look for the qualifier. The word or phrase in the docs version that carries the warning, the condition, or the causal link. Check whether it survived the trip to each of the other three surfaces.
-
-If it survived on all four: your content system is doing its job.
-
-If it disappeared on one: you have a drift problem, probably in the UX writer's queue or the chatbot's retrieval layer.
-
-If it disappeared on two or more: the content is not being treated as a connected system. Each surface is being written in isolation, and the user is paying the integration tax.
-
-That is your disclosure gap. It took fifteen minutes to find. Fixing it is a longer conversation, but you cannot fix what you have not named.
+![A four-step diagnostic process: pick one concept on three or more surfaces, open four tabs (docs, product UI, onboarding, chatbot), check whether the qualifier survived each surface, then diagnose as healthy system, content drift, or system failure](/blog/images/progressive_disclosure_monday_diagnostic_process.svg)
 
 ## What to take from this
 
