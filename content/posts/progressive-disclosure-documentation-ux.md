@@ -1,7 +1,7 @@
 ---
 title: "Progressive Disclosure Is Not What You Think"
 summary: "Part 2 of Docs as Interface. Most teams read progressive disclosure as hide complexity behind a click. That is not what it is. Here is how to apply it across every surface your documentation now reaches, and a 15-minute diagnostic you can run on your own docs on Monday."
-date: 2026-04-20
+date: 2026-04-21
 author: "Sulagna Sasmal"
 tags: ["docs", "ux", "strategy", "documentation-ux", "technical-writing"]
 ---
@@ -58,7 +58,7 @@ The question hierarchy for most developer-facing content looks roughly like this
 
 Most docs skip directly to question 3. Some skip to question 5. Almost none open with a working example that answers question 2 before touching installation.
 
-![What docs deliver first versus what readers ask first, shown as two mismatched stacks](/images/progressive_disclosure_editorial_hero.svg)
+![What docs deliver first versus what readers ask first, shown as two mismatched stacks](/blog/images/progressive_disclosure_editorial_hero.svg)
 
 ## The disclosure-by-surface matrix
 
