@@ -1,0 +1,50 @@
+<svg width="100%" viewBox="0 0 680 510" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Qualifier drift across four surfaces — three of four surfaces lost the warning</title>
+<desc>Four rows, one per surface: docs page, tooltip, onboarding, and chatbot. The docs row shows the sentence with the words "may impact" in bold amber — the qualifier is intact. The tooltip row shows "may affect," a softened substitute. The onboarding row has no qualifier at all. The chatbot row strips the qualifier entirely. Three of four surfaces lost the load-bearing phrase.</desc>
+<style>text { font-family: "Anthropic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }</style>
+
+<text x="40" y="26" fill="#141413" font-size="15" font-weight="600">qualifier drift across four surfaces</text>
+<text x="40" y="46" fill="#3D3D3A" font-size="12">the same concept, written four times — three versions dropped the qualifier</text>
+
+<!-- ROW 1: Docs page — qualifier intact -->
+<rect x="40" y="60" width="600" height="96" rx="8" fill="#F2FAF7" stroke="#0F6E56" stroke-width="0.5"/>
+<rect x="56" y="72" width="82" height="22" rx="11" fill="#E5F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="97" y="88" text-anchor="middle" fill="#0F6E56" font-size="12" font-weight="500">Docs page</text>
+<text x="56" y="118" fill="#141413" font-size="13">
+  <tspan>Deleting this config </tspan><tspan fill="#854F0B" font-weight="600">may impact</tspan><tspan> downstream models that depend on it.</tspan>
+</text>
+<rect x="516" y="72" width="116" height="22" rx="11" fill="#E5F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="574" y="88" text-anchor="middle" fill="#0F6E56" font-size="11" font-weight="500">✓ qualifier intact</text>
+<text x="56" y="138" fill="#888780" font-size="11" font-style="italic">source sentence — qualifier preserved with causal link</text>
+
+<!-- ROW 2: Tooltip — qualifier softened -->
+<rect x="40" y="168" width="600" height="96" rx="8" fill="#FEF6F0" stroke="#854F0B" stroke-width="0.5"/>
+<rect x="56" y="180" width="66" height="22" rx="11" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text x="89" y="196" text-anchor="middle" fill="#854F0B" font-size="12" font-weight="500">Tooltip</text>
+<text x="56" y="226" fill="#141413" font-size="13">
+  <tspan>Deleting this config </tspan><tspan fill="#888780" font-style="italic">may affect</tspan><tspan> other models.</tspan>
+</text>
+<rect x="516" y="180" width="116" height="22" rx="11" fill="#FAE8E0" stroke="#9A3C1D" stroke-width="0.5"/>
+<text x="574" y="196" text-anchor="middle" fill="#9A3C1D" font-size="11" font-weight="500">✗ qualifier lost</text>
+<text x="56" y="246" fill="#888780" font-size="11" font-style="italic">"affect" is softer than "impact" — the causal link has evaporated</text>
+
+<!-- ROW 3: Onboarding — no qualifier -->
+<rect x="40" y="276" width="600" height="96" rx="8" fill="#F3F2FD" stroke="#534AB7" stroke-width="0.5"/>
+<rect x="56" y="288" width="90" height="22" rx="11" fill="#EBEBFC" stroke="#534AB7" stroke-width="0.5"/>
+<text x="101" y="304" text-anchor="middle" fill="#534AB7" font-size="12" font-weight="500">Onboarding</text>
+<text x="56" y="334" fill="#141413" font-size="13">You can delete configurations you no longer need.</text>
+<rect x="516" y="288" width="116" height="22" rx="11" fill="#FAE8E0" stroke="#9A3C1D" stroke-width="0.5"/>
+<text x="574" y="304" text-anchor="middle" fill="#9A3C1D" font-size="11" font-weight="500">✗ qualifier lost</text>
+<text x="56" y="354" fill="#888780" font-size="11" font-style="italic">no qualifier at all — the risk is invisible from this surface</text>
+
+<!-- ROW 4: Chatbot — qualifier stripped -->
+<rect x="40" y="384" width="600" height="96" rx="8" fill="#FEF1EE" stroke="#9A3C1D" stroke-width="0.5"/>
+<rect x="56" y="396" width="70" height="22" rx="11" fill="#FAE8E0" stroke="#9A3C1D" stroke-width="0.5"/>
+<text x="91" y="412" text-anchor="middle" fill="#9A3C1D" font-size="12" font-weight="500">Chatbot</text>
+<text x="56" y="442" fill="#141413" font-size="13">Yes, configurations can be deleted.</text>
+<rect x="516" y="396" width="116" height="22" rx="11" fill="#FAE8E0" stroke="#9A3C1D" stroke-width="0.5"/>
+<text x="574" y="412" text-anchor="middle" fill="#9A3C1D" font-size="11" font-weight="500">✗ qualifier lost</text>
+<text x="56" y="462" fill="#888780" font-size="11" font-style="italic">qualifier stripped from the source document by the retrieval layer</text>
+
+<text x="340" y="498" text-anchor="middle" fill="#3D3D3A" font-size="12" font-style="italic">"may impact" was the only word that mattered. It survived on one surface out of four.</text>
+</svg>
