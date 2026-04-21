@@ -10,7 +10,7 @@ Progressive disclosure is the most misunderstood pattern in documentation UX.
 
 Most teams read it as "hide complexity behind a click." That is not what it is. It is about matching information to the reader's current question, not sequencing information by length, and not deferring rendering with an accordion.
 
-This is the second piece in the Docs as Interface series. The [first post]({{< relref "/posts/documentation-is-an-interface-we-keep-building-it-like-a-library/" >}}) made the case that documentation is no longer a destination. It is backend content for five different delivery surfaces: docs portal, in-app help, chatbot, API reference, and AI assistant. If that shift is real, then every content pattern we inherited from the portal era needs to be re-examined. Progressive disclosure is the first one worth reopening, because it is the pattern most teams get wrong even inside the portal, and the one that breaks hardest when content gets pulled into smaller surfaces.
+This is the second piece in the Docs as Interface series. The [first post](/blog/posts/documentation-is-an-interface-we-keep-building-it-like-a-library/) made the case that documentation is no longer a destination. It is backend content for five different delivery surfaces: docs portal, in-app help, chatbot, API reference, and AI assistant. If that shift is real, then every content pattern we inherited from the portal era needs to be re-examined. Progressive disclosure is the first one worth reopening, because it is the pattern most teams get wrong even inside the portal, and the one that breaks hardest when content gets pulled into smaller surfaces.
 
 ## The misread definition
 
@@ -67,7 +67,7 @@ The question hierarchy applies *per surface*, not just to the docs page. Each su
 Here is the matrix I use when content touches more than one surface:
 
 | Surface | Question it answers | Length | Failure mode |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Tooltip | What happens if I click this? | One line | Vagueness that removes the warning |
 | In-app help | How do I complete this task right now? | Three to six lines | Missing the qualifier that makes it safe |
 | Onboarding | What is this whole capability? | A paragraph | Cheerful framing that hides risk |
