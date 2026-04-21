@@ -58,7 +58,7 @@ The question hierarchy for most developer-facing content looks roughly like this
 
 Most docs skip directly to question 3. Some skip to question 5. Almost none open with a working example that answers question 2 before touching installation.
 
-![What docs deliver first versus what readers ask first, shown as two mismatched stacks](/blog/images/progressive_disclosure_editorial_hero.svg)
+{{< figure src="/blog/images/progressive_disclosure_editorial_hero.svg" alt="What docs deliver first versus what readers ask first, shown as two mismatched stacks" caption="The gap between the order docs deliver and the order readers ask is where bounce happens." >}}
 
 ## The disclosure-by-surface matrix
 
@@ -82,7 +82,7 @@ This is not achievable through willpower or review cycles. It needs to be a stru
 
 Reading about this does nothing. Here is what to actually do.
 
-![A four-step diagnostic process for finding the disclosure gap](/blog/images/progressive_disclosure_monday_diagnostic_process.svg)
+{{< figure src="/blog/images/progressive_disclosure_monday_diagnostic_process.svg" alt="A four-step diagnostic process for finding the disclosure gap" caption="A fifteen-minute diagnostic for finding the disclosure gap in your product." >}}
 
 Pick one concept in your product that appears on at least three surfaces. A destructive action is a good choice because the stakes make the disclosure problem visible.
 
@@ -96,7 +96,7 @@ Tab three: the onboarding tour or getting-started flow. Find where this capabili
 
 Tab four: your chatbot or AI assistant. Ask it a plausible user question about the action. Write down the answer.
 
-![The qualifier drift pattern across four surfaces — three of four surfaces lost the warning](/blog/images/progressive_disclosure_qualifier_drift.svg)
+{{< figure src="/blog/images/progressive_disclosure_qualifier_drift.svg" alt="The qualifier drift pattern across four surfaces" caption="Three of four surfaces lost the qualifier. The user stitches these together and the warning is invisible." >}}
 
 Now put the four sentences in a row and look for the qualifier. The word or phrase in the docs version that carries the warning, the condition, or the causal link. Check whether it survived the trip to each of the other three surfaces.
 
