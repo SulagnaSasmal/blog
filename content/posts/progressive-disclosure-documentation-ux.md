@@ -1,7 +1,7 @@
 ---
 title: "Progressive Disclosure Is Not What You Think"
 summary: "Part 2 of Docs as Interface. Most teams read progressive disclosure as hide complexity behind a click. That is not what it is. Here is how to apply it across every surface your documentation now reaches, and a 15-minute diagnostic you can run on your own docs on Monday."
-date: 2026-04-21
+date: 2026-04-20
 author: "Sulagna Sasmal"
 tags: ["docs", "ux", "strategy", "documentation-ux", "technical-writing"]
 ---
@@ -96,9 +96,9 @@ Tab three: the onboarding tour or getting-started flow. Find where this capabili
 
 Tab four: your chatbot or AI assistant. Ask it a plausible user question about the action. Write down the answer.
 
-Now put the four sentences in a row and look for the qualifier. The word or phrase in the docs version that carries the warning, the condition, or the causal link. Check whether it survived the trip to each of the other three surfaces.
-
 ![The qualifier drift pattern across four surfaces — three of four surfaces lost the warning](/blog/images/progressive_disclosure_qualifier_drift.svg)
+
+Now put the four sentences in a row and look for the qualifier. The word or phrase in the docs version that carries the warning, the condition, or the causal link. Check whether it survived the trip to each of the other three surfaces.
 
 If it survived on all four: your content system is doing its job.
 
