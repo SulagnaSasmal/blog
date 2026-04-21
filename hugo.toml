@@ -42,3 +42,6 @@ theme = "PaperMod"
 
 [pagination]
   pagerSize = 10
+
+[markup.goldmark.extensions.typographer]
+  disable = true
