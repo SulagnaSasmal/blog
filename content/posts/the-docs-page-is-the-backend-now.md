@@ -5,10 +5,6 @@ draft: false
 tags: ["technical-writing", "documentation-engineering", "ux", "docs-as-interface", "ai", "content-strategy"]
 description: "Single-sourcing solved coordination between human authors. It does nothing once a language model regenerates your source on every query. Part 3 of the Docs as Interface series: the three things you build into the source so the part that matters survives a reader you cannot see."
 summary: "When the chatbot answers first and your page is the data source behind it, you are not writing the last thing the user reads. You are writing the input to whatever writes it. Here is what that changes."
-cover:
-    image: "https://sulagnasasmal.github.io/blog/images/docs-as-backend-two-paths.svg"
-    alt: "One sentence traced down two paths. Unprotected prose loses the qualifier through LLM regeneration. Engineered source preserves it through schema, retrieval constraints, and downstream validation."
-    relative: false
 ShowReadingTime: true
 ShowToc: false
 ---
