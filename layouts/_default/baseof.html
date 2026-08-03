@@ -1,0 +1,51 @@
+{{- /*
+  Project override of PaperMod's _default/baseof.html (theme commit 10d3dcc).
+
+  Only change vs. upstream: the footer partialCached variant list.
+
+  Upstream caches the footer keyed on .Layout, .Kind, hideFooter and
+  ShowCodeCopyButtons. Every regular post shares identical values for all four,
+  so the footer — and with it extend_footer.html and post-interactions.html —
+  was rendered once for whichever post Hugo built first and then reused
+  verbatim on every other post. That is why every post's share buttons and
+  discussion prompt pointed at the DocCraft build-log post: the partial's
+  .Permalink, .Title and .Params.discussionPrompt were correct, but they were
+  evaluated against one page and cached for all of them.
+
+  Adding .Page to the variant list makes the cache key per-page, which is the
+  same thing upstream already does for the header one line above.
+
+  If the theme is updated, re-sync this file against the new upstream baseof
+  and re-apply the .Page variant.
+*/ -}}
+{{- if lt hugo.Version "0.146.0" }}
+{{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+{{- $theme := site.Params.defaultTheme | default "auto" }}
+{{- if eq $theme "dark" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
+{{- else if eq $theme "light" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="light">
+{{- else }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="auto">
+{{- end }}
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
+<body class="list" id="top">
+{{- else }}
+<body id="top">
+{{- end }}
+    {{ partialCached "header.html" . .Page -}}
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Page .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
+</html>
