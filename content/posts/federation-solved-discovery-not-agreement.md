@@ -1,7 +1,7 @@
 ---
 title: "Docs as Interface, Part 4: Federation Solved Discovery. It Didn't Solve Agreement."
 date: 2026-08-04
-draft: true
+draft: false
 tags: ["ai", "documentation", "federation", "rag"]
 discussionPrompt: "Where does agreement actually live in your federated docs setup: in source, in retrieval, or downstream in validation?"
 cover:
