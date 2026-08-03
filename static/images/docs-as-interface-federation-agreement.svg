@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 580" class="fig" data-theme="auto" data-paused="false" style="--loop:12s" role="img" aria-labelledby="ttl desc">
+  <title id="ttl">Federation solved discovery, not agreement</title>
+  <desc id="desc">Three federated documentation sources are each individually verified. An agent reads across all three and the merged answer fails at the seam. Three engineered mechanisms — schema in source, retrieval constraints, and validation downstream — are then applied and the merged answer becomes consistent.</desc>
+
+  <style>
+    .fig{--deep:#003C51;--mid:#006E74;--cyan:#0097AC;--paper:#F2F7F8;--green:#01B27C;--coral:#FC6A59;--panel:#F2F7F8;--card:#FFFFFF;--line:#D3E2E5;--ink:#003C51;--muted:#5E8891;--pill:#FFFFFF}
+    @media (prefers-color-scheme: dark){
+      .fig[data-theme="auto"]{--panel:#00222E;--card:#01323F;--line:#0B4B58;--ink:#E4F1F3;--muted:#8FB4BC;--pill:#013642}
+    }
+    .fig[data-theme="dark"]{--panel:#00222E;--card:#01323F;--line:#0B4B58;--ink:#E4F1F3;--muted:#8FB4BC;--pill:#013642}
+    .fig text{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+    .fig g,.fig rect,.fig path,.fig line,.fig polygon,.fig circle{transform-box:fill-box;transform-origin:center}
+    .fig .a-card,.fig .a-check,.fig .a-flow,.fig .a-arrow,.fig .a-seam,.fig .a-ring,.fig .a-agent,.fig .a-stem,.fig .a-out,.fig .a-x,.fig .a-chk,.fig .a-capa,.fig .a-capb,.fig .a-band,.fig .a-pill{animation-duration:var(--loop,12s);animation-timing-function:cubic-bezier(.22,.7,.2,1);animation-iteration-count:infinite;animation-fill-mode:both}
+    .fig .a-card{animation-name:fig-card}
+    .fig .a-check{animation-name:fig-check}
+    .fig .a-flow{animation-name:fig-flow;animation-timing-function:linear}
+    .fig .a-arrow{animation-name:fig-arrow}
+    .fig .a-seam{animation-name:fig-seam}
+    .fig .a-ring{animation-name:fig-ring}
+    .fig .a-agent{animation-name:fig-agent}
+    .fig .a-stem{animation-name:fig-stem;animation-timing-function:linear}
+    .fig .a-out{animation-name:fig-out}
+    .fig .a-x{animation-name:fig-x}
+    .fig .a-chk{animation-name:fig-chk}
+    .fig .a-capa{animation-name:fig-capa}
+    .fig .a-capb{animation-name:fig-capb}
+    .fig .a-band{animation-name:fig-band}
+    .fig .a-pill{animation-name:fig-pill}
+    .fig[data-paused="true"] *{animation-play-state:paused}
+    @keyframes fig-card{0%{opacity:0;transform:translateY(16px)}6%,95%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes fig-check{0%,7%{opacity:0;transform:scale(.3)}11%{opacity:1;transform:scale(1.2)}14%,95%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.8)}}
+    @keyframes fig-flow{0%,10%{opacity:0;stroke-dashoffset:240}12%{opacity:1}22%,95%{opacity:1;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:0}}
+    @keyframes fig-arrow{0%,21%{opacity:0}25%,95%{opacity:1}100%{opacity:0}}
+    @keyframes fig-seam{0%,23%{opacity:0;transform:scale(.4)}26%{opacity:1;transform:scale(1.7)}30%{transform:scale(1)}34%{transform:scale(1.4)}38%{transform:scale(1)}42%{transform:scale(1.35)}46%,56%{transform:scale(1);opacity:1}64%,100%{opacity:0;transform:scale(.5)}}
+    @keyframes fig-ring{0%,24%{opacity:0;transform:scale(.5)}28%{opacity:.55;transform:scale(1.1)}36%{opacity:0;transform:scale(2.2)}44%{opacity:.5;transform:scale(1.1)}52%{opacity:0;transform:scale(2.2)}100%{opacity:0}}
+    @keyframes fig-agent{0%,24%{opacity:0;transform:translateY(10px)}30%,95%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-6px)}}
+    @keyframes fig-stem{0%,30%{opacity:0;stroke-dashoffset:70}32%{opacity:1}36%,95%{opacity:1;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:0}}
+    @keyframes fig-out{0%,33%{opacity:0;transform:translateY(10px)}38%,95%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-6px)}}
+    @keyframes fig-x{0%,37%{opacity:0;transform:scale(.4)}41%{opacity:1;transform:scale(1.25)}44%,56%{opacity:1;transform:scale(1)}60%,100%{opacity:0;transform:scale(.5)}}
+    @keyframes fig-chk{0%,59%{opacity:0;transform:scale(.4)}63%{opacity:1;transform:scale(1.25)}66%,95%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.85)}}
+    @keyframes fig-capa{0%,39%{opacity:0;transform:translateY(6px)}43%,54%{opacity:1;transform:translateY(0)}58%,100%{opacity:0;transform:translateY(-6px)}}
+    @keyframes fig-capb{0%,62%{opacity:0;transform:translateY(6px)}66%,95%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-6px)}}
+    @keyframes fig-band{0%,47%{opacity:0;transform:translateY(22px)}53%,95%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(10px)}}
+    @keyframes fig-pill{0%,50%{opacity:0;transform:translateY(10px)}56%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+    @media (prefers-reduced-motion: reduce){
+      .fig *{animation:none !important}
+      .fig .a-seam,.fig .a-ring,.fig .a-x,.fig .a-capa{display:none}
+    }
+  </style>
+
+  <rect x="8" y="8" width="804" height="564" rx="18" fill="var(--panel)" stroke="var(--line)" stroke-width="1"></rect>
+
+  <rect x="40" y="36" width="4" height="50" rx="2" fill="var(--cyan)"></rect>
+  <text x="58" y="52" font-size="11" font-weight="700" letter-spacing="1.6" fill="var(--cyan)">DOCS AS INTERFACE · PART 4</text>
+  <text x="58" y="82" font-size="23" font-weight="700" letter-spacing="-0.2" fill="var(--ink)">Discovery solved. Agreement did not.</text>
+
+  <g class="a-card">
+    <rect x="40" y="118" width="220" height="86" rx="12" fill="var(--card)" stroke="var(--line)" stroke-width="1"></rect>
+    <text x="150" y="157" text-anchor="middle" font-size="17" font-weight="600" fill="var(--ink)">Payments</text>
+    <text x="150" y="177" text-anchor="middle" font-size="12" fill="var(--muted)">service docs</text>
+  </g>
+  <g class="a-check">
+    <circle cx="236" cy="142" r="11" fill="var(--green)"></circle>
+    <polyline points="230,142 235,147 243,138" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  </g>
+
+  <g class="a-card" style="animation-delay:.12s">
+    <rect x="300" y="118" width="220" height="86" rx="12" fill="var(--card)" stroke="var(--line)" stroke-width="1"></rect>
+    <text x="410" y="157" text-anchor="middle" font-size="17" font-weight="600" fill="var(--ink)">Accounts</text>
+    <text x="410" y="177" text-anchor="middle" font-size="12" fill="var(--muted)">service docs</text>
+  </g>
+  <g class="a-check" style="animation-delay:.12s">
+    <circle cx="496" cy="142" r="11" fill="var(--green)"></circle>
+    <polyline points="490,142 495,147 503,138" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  </g>
+
+  <g class="a-card" style="animation-delay:.24s">
+    <rect x="560" y="118" width="220" height="86" rx="12" fill="var(--card)" stroke="var(--line)" stroke-width="1"></rect>
+    <text x="670" y="157" text-anchor="middle" font-size="17" font-weight="600" fill="var(--ink)">Ledger</text>
+    <text x="670" y="177" text-anchor="middle" font-size="12" fill="var(--muted)">service docs</text>
+  </g>
+  <g class="a-check" style="animation-delay:.24s">
+    <circle cx="756" cy="142" r="11" fill="var(--green)"></circle>
+    <polyline points="750,142 755,147 763,138" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  </g>
+
+  <path class="a-flow" d="M150,204 C150,255 300,252 345,296" fill="none" stroke="var(--cyan)" stroke-width="1.4" stroke-dasharray="240"></path>
+  <path class="a-flow" d="M410,204 L410,296" fill="none" stroke="var(--cyan)" stroke-width="1.4" stroke-dasharray="240" style="animation-delay:.1s"></path>
+  <path class="a-flow" d="M670,204 C670,255 520,252 475,296" fill="none" stroke="var(--cyan)" stroke-width="1.4" stroke-dasharray="240" style="animation-delay:.2s"></path>
+  <polygon class="a-arrow" points="345,299 340,290 350,290" fill="var(--cyan)"></polygon>
+  <polygon class="a-arrow" points="410,299 405,290 415,290" fill="var(--cyan)"></polygon>
+  <polygon class="a-arrow" points="475,299 470,290 480,290" fill="var(--cyan)"></polygon>
+
+  <polygon class="a-ring" points="410,266 428,284 410,302 392,284" fill="none" stroke="var(--coral)" stroke-width="1.5"></polygon>
+  <polygon class="a-seam" points="410,274 420,284 410,294 400,284" fill="var(--coral)"></polygon>
+
+  <g class="a-agent">
+    <rect x="275" y="300" width="270" height="74" rx="12" fill="var(--card)" stroke="var(--cyan)" stroke-width="1.2"></rect>
+    <rect x="275" y="300" width="270" height="74" rx="12" fill="var(--cyan)" opacity="0.08"></rect>
+    <text x="410" y="330" text-anchor="middle" font-size="15" font-weight="600" fill="var(--ink)">Agent reads across all three</text>
+    <text x="410" y="352" text-anchor="middle" font-size="12" fill="var(--muted)">one answer from three sources</text>
+  </g>
+
+  <line class="a-stem" x1="410" y1="374" x2="410" y2="438" stroke="var(--cyan)" stroke-width="1.6" stroke-dasharray="70"></line>
+
+  <g class="a-band">
+    <rect x="30" y="384" width="760" height="46" rx="12" fill="var(--card)" stroke="var(--line)" stroke-width="1"></rect>
+    <text x="46" y="376" font-size="10" font-weight="700" letter-spacing="1.5" fill="var(--cyan)">ENGINEERED DOWNSTREAM</text>
+    <g class="a-pill">
+      <rect x="46" y="392" width="228" height="30" rx="8" fill="var(--pill)" stroke="var(--line)" stroke-width="1"></rect>
+      <circle cx="66" cy="407" r="9" fill="var(--cyan)"></circle>
+      <text x="66" y="407" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+      <text x="84" y="407" dominant-baseline="central" font-size="13" font-weight="500" fill="var(--ink)">Schema in source</text>
+    </g>
+    <g class="a-pill" style="animation-delay:.14s">
+      <rect x="296" y="392" width="228" height="30" rx="8" fill="var(--pill)" stroke="var(--line)" stroke-width="1"></rect>
+      <circle cx="316" cy="407" r="9" fill="var(--cyan)"></circle>
+      <text x="316" y="407" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+      <text x="334" y="407" dominant-baseline="central" font-size="13" font-weight="500" fill="var(--ink)">Retrieval constraints</text>
+    </g>
+    <g class="a-pill" style="animation-delay:.28s">
+      <rect x="546" y="392" width="228" height="30" rx="8" fill="var(--pill)" stroke="var(--line)" stroke-width="1"></rect>
+      <circle cx="566" cy="407" r="9" fill="var(--cyan)"></circle>
+      <text x="566" y="407" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+      <text x="584" y="407" dominant-baseline="central" font-size="13" font-weight="500" fill="var(--ink)">Validation downstream</text>
+    </g>
+  </g>
+
+  <g class="a-out">
+    <rect x="300" y="440" width="220" height="74" rx="12" fill="var(--card)" stroke="var(--line)" stroke-width="1"></rect>
+    <text x="392" y="477" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="var(--ink)">Merged answer</text>
+  </g>
+
+  <g class="a-x">
+    <circle cx="505" cy="455" r="16" fill="var(--coral)"></circle>
+    <line x1="498" y1="448" x2="512" y2="462" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"></line>
+    <line x1="512" y1="448" x2="498" y2="462" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"></line>
+  </g>
+  <g class="a-chk">
+    <circle cx="505" cy="455" r="16" fill="var(--green)"></circle>
+    <polyline points="497,455 503,461 514,449" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  </g>
+
+  <g class="a-capa">
+    <circle cx="46" cy="540" r="5" fill="var(--coral)"></circle>
+    <text x="60" y="545" font-size="13" fill="var(--ink)">Every source is correct on its own. The merged answer is not.</text>
+  </g>
+  <g class="a-capb">
+    <circle cx="46" cy="540" r="5" fill="var(--green)"></circle>
+    <text x="60" y="545" font-size="13" fill="var(--ink)">Agreement is engineered downstream, not discovered.</text>
+  </g>
+</svg>
