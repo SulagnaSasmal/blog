@@ -17,7 +17,7 @@
   --radius-md: 20px;
 }
 
-body.dark {
+:root[data-theme="dark"] {
   --theme: #131110;
   --entry: rgba(24, 19, 16, 0.8);
   --primary: #f7efe7;
@@ -44,7 +44,7 @@ body {
   color: var(--content);
 }
 
-body.dark {
+[data-theme="dark"] body {
   background:
     radial-gradient(circle at top left, rgba(180, 104, 54, 0.18), transparent 32%),
     radial-gradient(circle at 82% 10%, rgba(13, 122, 116, 0.14), transparent 26%),
@@ -164,10 +164,10 @@ body::after {
   box-shadow: var(--shadow-soft);
 }
 
-body.dark .page-header,
-body.dark .post-single,
-body.dark .first-entry,
-body.dark .post-entry {
+[data-theme="dark"] .page-header,
+[data-theme="dark"] .post-single,
+[data-theme="dark"] .first-entry,
+[data-theme="dark"] .post-entry {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
     var(--entry);
@@ -427,7 +427,7 @@ body.dark .post-entry {
     var(--entry);
 }
 
-body.dark .blog-intro {
+[data-theme="dark"] .blog-intro {
   background:
     linear-gradient(160deg, rgba(180, 104, 54, 0.09), transparent 50%),
     var(--entry);
@@ -481,7 +481,7 @@ body.dark .blog-intro {
   background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
 }
 
-body.dark .post-lead {
+[data-theme="dark"] .post-lead {
   background:
     linear-gradient(170deg, rgba(13, 122, 116, 0.1), transparent 55%),
     var(--entry);
@@ -729,9 +729,9 @@ a.post-tag:hover {
   padding: 1.55rem;
 }
 
-body.dark .about-summary-card,
-body.dark .about-main-card,
-body.dark .side-note-card {
+[data-theme="dark"] .about-summary-card,
+[data-theme="dark"] .about-main-card,
+[data-theme="dark"] .side-note-card {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
     var(--entry);
@@ -967,12 +967,12 @@ body.dark .side-note-card {
   box-shadow: var(--shadow-soft);
 }
 
-body.dark .post-content figure.flow-figure {
+[data-theme="dark"] .post-content figure.flow-figure {
   background: #28221a;
   border-color: rgba(255, 214, 169, 0.18);
 }
 
-body.dark .post-content figure.flow-figure figcaption {
+[data-theme="dark"] .post-content figure.flow-figure figcaption {
   color: #9a8878;
 }
 
@@ -1321,4 +1321,41 @@ body.dark .post-content figure.flow-figure figcaption {
 .giscus,
 .giscus-frame {
   width: 100%;
+}
+
+/* ---------------------------------------------------------------------------
+   Mobile: keep diagram figures legible.
+   The SVG figures are authored on an 820-wide canvas. Scaled to fit a 390px
+   viewport that is a 0.41 scale factor, which renders their 17px card labels
+   at 6.9px and 12px meta text at 4.9px. Below 640px we stop scaling them down
+   past the point of readability and let the figure scroll horizontally inside
+   its own box instead, which keeps the page itself free of horizontal scroll.
+   --------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .post-content figure {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .post-content figure img {
+    min-width: 640px;
+    max-width: none;
+  }
+
+  /* Caption belongs to the figure, not the scrolled canvas, so pin it. */
+  .post-content figure figcaption {
+    position: sticky;
+    left: 0;
+    max-width: 100vw;
+  }
+}
+
+/* Theme toggle was a 24px-wide target, right on the WCAG 2.5.8 minimum. */
+#theme-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -20,7 +20,11 @@ theme = "PaperMod"
     favicon32x32 = "favicon.svg"
     apple_touch_icon = "favicon.svg"
     safari_pinned_tab = "safari-pinned-tab.svg"
-    theme_color = "#b46836"
+    # Matches --theme in custom.css. PaperMod emits an unscoped theme-color
+    # meta before extend_head, and browsers take the first matching tag, so
+    # this value wins over the scheme-scoped pair there. Keeping it equal to
+    # the light background beats the accent orange, which clashed in dark mode.
+    theme_color = "#f6f0e7"
     msapplication_TileColor = "#b46836"
 
   [params.footer]
