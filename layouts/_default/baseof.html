@@ -33,7 +33,16 @@
 {{- end }}
 
 <head>
-    {{- partial "head.html" . }}
+    {{- /* head.html emits an unscoped <meta name="theme-color"> at line 98,
+           before it pulls in extend_head.html at line 197. Browsers use the
+           first theme-color whose media attribute matches, and an unscoped tag
+           always matches, so it beat the light/dark pair in extend_head and a
+           phone in dark mode got a light address bar. Rendering the partial to
+           a string and dropping that one tag is cheaper and far less brittle
+           than forking 205 lines of head.html for a single meta element. */}}
+    {{- $head := printf "%s" (partial "head.html" .) }}
+    {{- $stock := printf `<meta name="theme-color" content="%s">` (site.Params.assets.theme_color | default "#2e2e33") }}
+    {{- replace $head $stock "" | safeHTML }}
 </head>
 
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}

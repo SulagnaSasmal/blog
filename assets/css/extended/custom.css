@@ -8,6 +8,10 @@
   --code-bg: rgba(43, 34, 26, 0.08);
   --border: rgba(90, 70, 49, 0.16);
   --accent-1: #b46836;
+  /* Text-safe accent. #b46836 measures 3.92:1 on the light ground,
+     under the 4.5:1 WCAG AA minimum for body-size text. Decorative uses
+     (rules, gradients, borders) stay on --accent-1. */
+  --accent-text: #a45f31;
   --accent-2: #c38f2e;
   --accent-3: #0d7a74;
   --accent-4: #7b3f78;
@@ -28,6 +32,8 @@
   --border: rgba(255, 214, 169, 0.12);
   --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.34);
   --shadow-strong: 0 38px 110px rgba(0, 0, 0, 0.5);
+  /* #b46836 measures 4.37:1 on the dark ground; nudged to clear 4.5:1. */
+  --accent-text: #b66b3a;
 }
 
 html {
@@ -449,7 +455,7 @@ body::after {
 .blog-ref-links a {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--accent-1);
+  color: var(--accent-text);
   text-decoration: none;
   transition: color 0.16s ease;
 }
@@ -565,7 +571,7 @@ a.post-tag:hover {
 }
 
 .post-lead-title a:hover {
-  color: var(--accent-1);
+  color: var(--accent-text);
 }
 
 .post-lead-desc {
@@ -582,7 +588,7 @@ a.post-tag:hover {
   gap: 0.4rem;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--accent-1);
+  color: var(--accent-text);
   text-decoration: none;
   transition: gap 0.18s ease, color 0.18s ease;
 }
@@ -1227,7 +1233,7 @@ a.post-tag:hover {
 .chip.active {
   background: rgba(180, 104, 54, 0.15);
   border-color: rgba(180, 104, 54, 0.5);
-  color: var(--accent-1);
+  color: var(--accent-text);
   transform: translateY(-1px);
 }
 
@@ -1313,7 +1319,7 @@ a.post-tag:hover {
 }
 
 .comments-fallback a {
-  color: var(--accent-1);
+  color: var(--accent-text);
   text-decoration: underline;
 }
 

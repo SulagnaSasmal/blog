@@ -142,16 +142,34 @@ function setupGiscusThemeSync() {
     );
   }
 
+  // PaperMod records the active scheme as html[data-theme]; it never adds a
+  // class to <body>. Watching body.class meant this observer never fired, and
+  // the value it read was always false, so Giscus kept whatever theme it
+  // resolved at load and desynced the moment the reader used the toggle.
+  function currentTheme() {
+    return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  }
+
   var observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
-      if (mutation.attributeName === "class") {
-        var isDark = document.body.classList.contains("dark");
-        sendTheme(isDark ? "dark" : "light");
+      if (mutation.attributeName === "data-theme") {
+        sendTheme(currentTheme());
       }
     });
   });
 
-  observer.observe(document.body, { attributes: true });
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"]
+  });
+
+  // The iframe mounts asynchronously, so push the current theme once it is
+  // there in case the reader toggled before Giscus finished loading.
+  window.addEventListener("message", function (e) {
+    if (e.origin === "https://giscus.app" && e.data && e.data.giscus) {
+      sendTheme(currentTheme());
+    }
+  });
 }
 
 function setupCopyLink() {
