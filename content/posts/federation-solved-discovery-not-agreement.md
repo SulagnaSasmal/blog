@@ -3,7 +3,7 @@ title: "Docs as Interface, Part 4: Federation Solved Discovery. It Didn't Solve 
 date: 2026-08-04
 draft: false
 tags: ["technical-writing", "documentation-engineering", "docs-as-interface", "ai", "federation", "rag"]
-description: "The half federation solves is discovery. The half it leaves for you is agreement. Part 4 of the Docs as Interface series: why three individually correct sources still merge into an answer that is not, and the three honest places to put agreement."
+description: "An agent answers a question. Every source it drew from is correct. The answer is still wrong. Federation solved discovery. It did not solve agreement, and that is the half nobody budgets for."
 summary: "Three sources can return three answers. Federation made the disagreement legible. It did not resolve it. Here is where agreement actually has to live."
 discussionPrompt: "Where does agreement actually live in your federated docs setup: in source, in retrieval, or downstream in validation?"
 cover:
