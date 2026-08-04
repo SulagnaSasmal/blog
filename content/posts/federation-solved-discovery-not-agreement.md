@@ -13,6 +13,8 @@ cover:
   hiddenInSingle: true
 ---
 
+An agent answers a question. You trace it back to check the answer. Every source it drew from is correct. The answer is still wrong. Federation ships this failure quietly, and nothing in the architecture warns you it is happening.
+
 Federation makes a promise that sounds like the whole solution. Every team's docs, discoverable from one place, readable by one agent. The promise is real. It is also only half the problem.
 
 The half federation solves is discovery. The half it leaves for you is agreement. Those two get conflated constantly, which is why a federated doc system can feel finished and behave broken at the same time.
@@ -28,6 +30,8 @@ If discovery were the whole problem, you would be done here.
 ## The half it hides
 
 Three sources can return three answers. When each team owns its own docs, definitions drift: the same field means one thing in Payments and something adjacent in Ledger, and neither team is wrong from where they sit. Federation does not reconcile that drift. It surfaces it. The agent now reads all three contradictory sources with equal confidence and merges them into a single response, and the merged answer is not automatically the correct one. Federation made the disagreement legible. It did not resolve it.
+
+The system reports success at every step. Retrieval worked. Every source validated. The only thing that failed was the truth.
 
 ## Why discovery is easy and agreement is hard
 

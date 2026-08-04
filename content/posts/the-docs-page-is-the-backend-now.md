@@ -77,4 +77,4 @@ That is the argument for building the pipeline and not just the page. The writer
 
 I keep arriving at the same place from the tooling side. Thanks to Chris for naming it more sharply than I had.
 
-*Part 3 of the Docs as Interface series. Part 1: [Documentation Is an Interface. We Keep Building It Like a Library](/blog/posts/documentation-is-an-interface-we-keep-building-it-like-a-library/). Part 2: [Progressive Disclosure Is a Question Hierarchy](/blog/posts/progressive-disclosure-documentation-ux/).*
+*Part 3 of the Docs as Interface series. Part 1: [Documentation Is an Interface. We Keep Building It Like a Library](/blog/posts/documentation-is-an-interface-we-keep-building-it-like-a-library/). Part 2: [Progressive Disclosure Is Not What You Think](/blog/posts/progressive-disclosure-documentation-ux/).*
